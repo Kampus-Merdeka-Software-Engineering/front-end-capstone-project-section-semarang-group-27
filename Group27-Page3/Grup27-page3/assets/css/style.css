@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --main-color: #4FC0EC;
+    --second-color: #F5F5F5;
+    --thrid-color: #727272;
+
+
+    --main-font: 'Inter', sans-serif;
+    --heading-font: 'Open Sans', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: var(--heading-font);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+
+}
+
+section {
+    margin-top: 200px;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+.navbar {
+    background-color: #4FC0EC;
+}
+
+.navbar .nav-wrapper {
+    background-color: #4FC0EC;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+}
+
+.nav-wrapper .logo {
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    margin-left: -600px;
+    color: #F5F5F5;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+
+.nav-wrapper .menu-wrapper {
+    display: flex;
+    gap: 60px;
+    background-color: #4FC0EC
+}
+
+.nav-wrapper .menu-wrapper .menu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: #4FC0EC;
+}
+
+.menu-wrapper .menu .menu-link {
+    font-size: 1, 6rem;
+    color: #F5F5F5;
+    font-family: var(--heading-font);
+    font-weight: 500;
+}
+
+.menu-wrapper .menu .menu-link.active {
+    font-weight: 700;
+    color: #F5F5F5;
+
+}
+
+.menu-wrapper .btn-member {
+    font-family: var(--heading-font);
+    color: #4FC0EC;
+    font-weight: 500;
+    background-color: #F5F5F5;
+    padding: 10px 30px;
+    border-radius: 15px;
+}
+
+/* Home Start */
+
+.home .home-wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.home-wrapper .heading {
+    font-size: 3rem;
+    font-family: var(--main-font);
+    color: #727272;
+    font-weight: 700;
+    margin-top: -150px;
+    margin-left: 500px;
+}
+
+.home-wrapper .subheading {
+    font-size: 1, 25rem;
+    font-family: var(--main-font);
+    color: #727272;
+    font-weight: 400;
+    margin-left: 546px;
+}
+
+/* Home End */
+
+.login-wrapper {
+    margin: 150px;
+    margin-top: 30px !important;
+    color: #727272;
+}
+
+.h2 {
+    font-size: 1rem;
+}
+
+.tumpul-outline-biru {
+    width: 500px;
+    height: 10px;
+    background-color: #F5F5F5;
+    border: 2px solid #4FC0EC;
+    /* Warna outline biru */
+    border-radius: 10px;
+    /* Sudut tumpul */
+    margin: 50px auto;
+    margin-top: 5px !important;
+    margin-bottom: 0px !important;
+    padding: 20px;
+}
+
+.radio-container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.blue-radio {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    outline: 2px solid #4FC0EC;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.blue-radio:checked+.checkmark {
+    background-color: #4FC0EC;
+    /* Latar belakang biru saat dipilih */
+
+}
+
+.label {
+    display: block;
+    margin-top: 30px;
+}
+
+.checkbox-round {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    outline: 2px solid #4FC0EC;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.checkbox-round:checked {
+    background-color: #4FC0EC;
+}
+
+button {
+    background-color: #4FC0EC;
+    /* Green */
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 15px 150px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
