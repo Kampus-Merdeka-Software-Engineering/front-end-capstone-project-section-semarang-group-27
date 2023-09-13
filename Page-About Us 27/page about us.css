@@ -1,6 +1,6 @@
 <style>
 
-page {
+.page {
     background-color: #ffffff;
     display: flex;
     flex-direction: row;
@@ -181,6 +181,7 @@ page {
   height: 300px; 
   text-align: center;
   margin-top: 50px;
+  margin-left: 28px;
 }
 .left, .right {
     width: 30%;
@@ -196,6 +197,16 @@ page {
 }
 .title {
     text-align: center;
-    margin-top: 200px;
+    margin-top: 180px;
+    font-family: 'Open Sans-Regular', Helvetica;
+    color: #727272;
+}
+.box-text {
+  background-color: #4fc0eb;
+  color: #ffffff;
+  shape-outside: padding-box;
+  width: 350px; 
+  position: absolute;
+  font-family: 'Open Sans-Regular', Helvetica;
 }
 </style>
