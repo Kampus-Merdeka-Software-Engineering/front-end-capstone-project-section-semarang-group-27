@@ -1155,16 +1155,15 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .wrap-detail {
-  font-family: Arial, sans-serif !important;
+  font-family: 'Quicksand', sans-serif !important;
   padding: 0px !important;
-  margin-top: 100px !important;
   margin: auto !important;
-  width: 1400px !important;
+  width: 90% !important;
   flex-shrink: 0 !important;
   border-radius: 15px !important;
   border: 3px solid #979797 !important;
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.2) !important;
-  height: 400px;
+  height: auto;
 }
 
 .detail {
@@ -1173,25 +1172,29 @@ header.navbar-container .nav-list li:hover a {
   grid-gap: 50px !important;
   padding: 20px !important;
   padding-top: 50px;
+  font-size: 20px;
 }
 
 .left-column {
   text-align: left !important;
+  color: #727272;
 }
 
 .right-column {
   text-align: right !important;
+  color: #727272;
 }
 
 .appointment-confirm {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  margin-top: 100px !important;
+  margin-top: 120px !important;
+  color: #727272;
 }
 
 .appointment-confirm p {
-  font-size: 48px !important;
+  font-size: 36px !important;
 }
 .appointment-confirm svg {
   top: 50px !important;
