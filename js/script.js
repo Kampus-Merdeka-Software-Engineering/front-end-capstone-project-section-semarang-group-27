@@ -1,4 +1,4 @@
-// klo mau coba buat js page 2 coba buat dlu aja han
+// start page-3//
 document.addEventListener('DOMContentLoaded', function () {
   const loginForm = document.getElementById('loginForm');
   const message = document.getElementById('message');
@@ -48,3 +48,35 @@ document.addEventListener('DOMContentLoaded', function () {
     message.style.color = 'green';
   });
 });
+//end of page-3//
+
+//start page-4//
+document.addEventListener("DOMContentLoaded", function () {
+  loadContent();
+});
+
+function loadContent() {
+  var xhr = new XMLHttpRequest();
+
+  xhr.open("GET", "https://jsonplaceholder.typicode.com/users/", true);
+
+  xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+          var users = JSON.parse(xhr.responseText);
+          var rightColumn = document.querySelector(".right-column");
+          var user = users[0];
+
+            rightColumn.innerHTML = `
+              <p>${user.name}</p>
+              <p>${user.username}</p>
+              <p>${user.email}</p>
+              <p>${user.phone}</p>
+              <p>${user.website}</p>
+              <p>${user.company.name}</p>
+          `;
+      }
+  };
+  xhr.send();
+}
+//end of page-4//
+
