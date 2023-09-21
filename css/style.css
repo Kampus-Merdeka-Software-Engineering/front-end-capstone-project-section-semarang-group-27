@@ -474,6 +474,7 @@ header .btn:hover {
   min-height: 600px;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/bg1.jpg) no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   margin-top: 40px;
 }
@@ -751,6 +752,8 @@ ul {
   position: relative;
 }
 
+/*responsive*/
+
 @media (max-width: 991px) {
   html {
     font-size: 55%;
@@ -760,16 +763,33 @@ ul {
     padding: 2rem;
   }
 
-  section {
+  section { 
     padding: 2rem;
   }
 
-  .home {
-    background-position: left;
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 30px;
   }
+  
+  
+  section.our-services {
+    padding: 30px 0px;
+  }
+  
+  .inner-services-content {
+    margin-bottom: 20px;
+    
+  }
+  
+  .service-icon i{
+    width: 9rem;
+    height: 9rem;
+  }
+
 }
 
-/*responsive*/
 @media (max-width: 767px) {
   .footer-col {
     width: 50%;
