@@ -967,7 +967,7 @@ header.navbar-container-pagetiga .nav-list li:hover a {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-left: -200px;
+  margin-left: -100px;
 }
 
 .home-wrapper .heading {
