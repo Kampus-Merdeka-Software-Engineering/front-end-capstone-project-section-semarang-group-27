@@ -44,6 +44,10 @@
             <label for="" class="label">Full Name</label>
             <input type="text" class="tumpul-outline-biru" required>
         </div>
+        <div>
+            <label for="" class="label">E-mail</label>
+            <input type="email" class="tumpul-outline-biru" required>
+        </div>
 
         <div>
             <label for="" class="label" style="margin-bottom: 5px;">Gender</label>
@@ -68,17 +72,19 @@
             <input type="text" class="tumpul-outline-biru">
         </div>
 
-       
+       <!-- id sebelumnya cheklis diganti jadi confirm biar bisa di klik tulisannya-->
         <div style="margin-top: 20px;">
-            <input type="checkbox" id="cheklis" required
-            > I confirm that the information provide is accurate.<br> 
+            <input type="checkbox" id="confirm" required name="confirm"
+            > 
+            <label for="confirm"> I confirm that the information provide is accurate. </label><br> 
          
         </div>
 
         <div style="margin-top: 20px;">
-            <input type="checkbox" id="cheklis" required > I consent that to the appointment 
-            and the sharing of my medical information with the chosen docter.<br>
-            
+            <input type="checkbox" id="consent" required name="consent"> 
+            <label for="consent">I consent that to the appointment 
+                and the sharing of my medical information with the chosen docter.</label>
+            <br>
         </div>
 
         <div  style="margin-top: 50px; margin-bottom: 50px">
