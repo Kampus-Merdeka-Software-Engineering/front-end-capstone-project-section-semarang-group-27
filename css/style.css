@@ -1222,3 +1222,16 @@ header.navbar-container .nav-list li:hover a {
   padding-top: 20px;
 }
 /* akhiran css page 4 */
+
+/* testing modif fitur */
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4fc0ec;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
