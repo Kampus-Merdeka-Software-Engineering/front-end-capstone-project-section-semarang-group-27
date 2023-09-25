@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/icon-web.ico" />
+    <script type="text/javascript" src="js/script.js"></script>
+    <title>TwentySevenMedika</title>
+</head>
+<body class="page-tiga-body">
+    <!-- <header class="navbar-container-pagetiga">
+        <div class="logo">
+          <img src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
+        </div>
+        <div class="nama-company">
+          <p class="paragraf-nama">TwentySevenMedika</p>
+        </div>
+        <nav class="nav-list">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#" class="masuk" hidden>Sign In</a></li>
+          </ul>
+        </nav>
+      </header> -->
+      <!-- header start -->
+      <header>
+        <nav>
+          <div class="container-logo">
+            <!-- dibawah ini adalah logo -->
+            <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
+            <label class="nama-company">TwentySevenMedika</label>
+          </div>
+          <ul>
+            <li><a class="border-item-navbar" href="index.html">Home</a></li>
+            <li><a class="border-item-navbar" href="#">About Us</a></li>
+            <li><a class="border-item-navbar" href="page-2.html">Schedule</a></li>
+            <!-- <li><a class="border-item-navbar active" href="page-3.html">Appointment</a></li> -->
+          </ul>
+        </nav>
+      </header>
+      <!-- header end -->
+    <section class="home-pagetiga" id="home">
+        <div class="container home-wrapper">
+            <div class="content-left">
+                <h1 class="heading">Patient Information</h1>
+                <p class="subheading">Please fill the form below to book appointment</p>
+            </div>
+        </div>
+        <div class="content-right">
+        </div>
+    </section>
+
+    <div class="login-wrapper">
+        <form action="receipt.html">
+        <div>
+            <label for="" class="label">Full Name</label>
+            <input type="text" class="tumpul-outline-biru" required>
+        </div>
+        <div>
+            <label for="" class="label">E-mail</label>
+            <input type="email" class="tumpul-outline-biru" required>
+        </div>
+
+        <div>
+            <label for="" class="label" style="margin-bottom: 5px;">Gender</label>
+            <label class="radio-container" style="margin-right: 30px;">Male
+                <input type="radio" name="gender" class="blue-radio" required>
+                <span class="checkmark"></span>
+            </label>
+            <label class="radio-container">Female
+                <input type="radio" name="gender" class="blue-radio">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div>
+            <label for="" class="label">Date of Birth</label>
+            <input type="date" class="tumpul-outline-biru" required>
+        </div>
+
+        <div>
+            <label for="" class="label">Reason for the Visit (Please describe your symptoms or
+                reason for the appointment)</label>
+            <input type="text" class="tumpul-outline-biru">
+        </div>
+
+       <!-- id sebelumnya cheklis diganti jadi confirm biar bisa di klik tulisannya-->
+        <div style="margin-top: 20px;">
+            <input type="checkbox" id="confirm" required name="confirm"
+            > 
+            <label for="confirm"> I confirm that the information provide is accurate. </label><br> 
+         
+        </div>
+
+        <div style="margin-top: 20px;">
+            <input type="checkbox" id="consent" required name="consent"> 
+            <label for="consent">I consent that to the appointment 
+                and the sharing of my medical information with the chosen docter.</label>
+            <br>
+        </div>
+
+        <div  style="margin-top: 50px; margin-bottom: 50px">
+            <div class="book-btn">
+                <a href="receipt.html">
+                    <input type="submit" value="Book" class="btn-submit"></input>
+                </a>
+            </div>
+                
+        </div>
+        </form>
+    </div>
+    <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
+</body>
+
+</html>
