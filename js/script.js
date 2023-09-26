@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
 
     const fullname = document.getElementById('fullname').value;
+    const email = document.getElementById('email').value;
     const gender = document.querySelector('input[name="gender"]:checked');
     const birth = document.getElementById('birth').value;
     const reason = document.getElementById('reason').value;

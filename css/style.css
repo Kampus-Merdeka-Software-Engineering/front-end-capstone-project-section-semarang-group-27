@@ -801,25 +801,25 @@ button:focus-visible {
 a {
   text-decoration: none;
 }
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
 
 /* batas css page 1 */
 
 /* css page 3 awalan */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
 
 :root {
   --main-color: #4fc0ec;
-  --second-color: #f5f5f5;
+  --second-color: #ffffff;
   --thrid-color: #727272;
 
-  --main-font: 'Inter', sans-serif;
-  --heading-font: 'Open Sans', sans-serif;
+  --main-font: 'Quick sand', sans-serif;
+  --heading-font: 'Quick sand', sans-serif;
 }
 
 body {
-  background-color: #f5f5f5;
+  background-color: #ffffff;
   font-family: var(--heading-font);
 }
 
@@ -900,74 +900,17 @@ header.navbar-container-pagetiga .nav-list li:hover a {
   background-color: #fff;
   color: #4fc0ec;
 }
-/* 
-.navbar {
-  background-color: #4fc0ec;
-}
-
-.navbar .nav-wrapper {
-  background-color: #4fc0ec;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 120px;
-}
-
-.nav-wrapper .logo {
-  font-size: 2rem;
-  font-family: var(--heading-font);
-  font-weight: 500;
-  margin-left: -600px;
-  color: #f5f5f5;
-}
-
-.img-circle {
-  border-radius: 50%;
-}
-
-.nav-wrapper .menu-wrapper {
-  display: flex;
-  gap: 60px;
-  background-color: #4fc0ec;
-}
-
-.nav-wrapper .menu-wrapper .menu {
-  display: flex;
-  align-items: center;
-  gap: 60px;
-  background-color: #4fc0ec;
-}
-
-.menu-wrapper .menu .menu-link {
-  font-size: 1, 6rem;
-  color: #f5f5f5;
-  font-family: var(--heading-font);
-  font-weight: 500;
-}
-
-.menu-wrapper .menu .menu-link.active {
-  font-weight: 700;
-  color: #f5f5f5;
-}
-
-.menu-wrapper .btn-member {
-  font-family: var(--heading-font);
-  color: #4fc0ec;
-  font-weight: 500;
-  background-color: #f5f5f5;
-  padding: 10px 30px;
-  border-radius: 15px;
-} */
 
 /* Home Start */
 
 .home-pagetiga .home-wrapper {
-  margin: auto;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-left: -100px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 0vh;
+  justify-content: center;
+  margin-top: -70px;
 }
 
 .home-wrapper .heading {
@@ -975,45 +918,74 @@ header.navbar-container-pagetiga .nav-list li:hover a {
   font-family: var(--main-font);
   color: #727272;
   font-weight: 700;
-  margin-top: -150px;
-  margin-left: 500px;
+  margin: 0;
 }
 
 .home-wrapper .subheading {
-  font-size: 1, 25rem;
+  font-size: 1.25rem;
   font-family: var(--main-font);
   color: #727272;
   font-weight: 400;
-  margin-left: 546px;
+  margin-top: 10px;
 }
+
 
 /* Home End */
 
 .login-wrapper {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  margin-left: 150px;
-  margin-top: -70px !important;
+  margin-left: auto;
+  margin-top: 0; */
   color: #727272;
 }
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #727272;
+}
+
 
 .h2 {
   font-size: 1rem;
 }
 
 .tumpul-outline-biru {
-  width: 500px;
+  width: 80%;
   height: 10px;
-  background-color: #f5f5f5;
+  background-color: #f7f7f7;
   border: 2px solid #4fc0ec;
   /* Warna outline biru */
   border-radius: 10px;
   /* Sudut tumpul */
-  margin: 50px auto;
+  /* margin: 50px auto; */
   margin-top: 5px !important;
   margin-bottom: 0px !important;
   padding: 20px;
 }
+
+.tumpul-outline-biru:hover {
+  border-color: #318cb0;
+  cursor: pointer;
+}
+
+input[type=text].tumpul-outline-biru {
+ color: #727272;
+ font-size: 1rem;
+}
+input[type=email].tumpul-outline-biru {
+  color: #727272;
+  font-size: 1rem;
+}
+input[type=date].tumpul-outline-biru {
+  color: #727272;
+  font-size: 1rem;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #4FC0EC;
+}
+
 
 /* .page-tiga-body {
   height: ;
@@ -1024,7 +996,7 @@ header.navbar-container-pagetiga .nav-list li:hover a {
   padding-left: 35px;
   margin-bottom: 10px;
   cursor: pointer;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 .blue-radio {
@@ -1032,18 +1004,19 @@ header.navbar-container-pagetiga .nav-list li:hover a {
 }
 
 .checkmark {
+  align-items: center;
   position: absolute;
   top: 4px;
   left: 10px;
   width: 15px;
   height: 15px;
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 50%;
   vertical-align: middle;
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   appearance: none;
   outline: 2px solid #4fc0ec;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   cursor: pointer;
 }
 
@@ -1053,6 +1026,10 @@ header.navbar-container-pagetiga .nav-list li:hover a {
 }
 
 .label {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: 0;
   display: block;
   margin-top: 30px;
 }
@@ -1062,7 +1039,7 @@ header.navbar-container-pagetiga .nav-list li:hover a {
   /* Green */
   border: none;
   border-radius: 10px;
-  color: white;
+  color: #ffffff;
   padding: 15px 150px;
   text-align: center;
   text-decoration: none;
@@ -1076,6 +1053,10 @@ header.navbar-container-pagetiga .nav-list li:hover a {
 }
 
 .book-btn {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
+  margin-top: 0;
   justify-content: center;
   display: flex;
 }
@@ -1158,7 +1139,20 @@ header.navbar-container .nav-list li:hover a {
   color: #4fc0ec;
 }
 
+.bg-page4{
+  background: linear-gradient(0deg, rgba(114, 114, 114, 0.50) 0%, rgba(114, 114, 114, 0.50) 100%), url(../assets/img/bg-page4.jpg), lightgray 50% / cover no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif !important;
+  color: #727272;
+}
+
 .wrap-detail {
+  background-color: #fff;
   font-family: 'Quicksand', sans-serif !important;
   padding: 0px !important;
   margin: auto !important;
@@ -1175,8 +1169,7 @@ header.navbar-container .nav-list li:hover a {
   grid-template-columns: 1fr 1fr !important;
   grid-gap: 50px !important;
   padding: 20px !important;
-  padding-top: 50px;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .left-column {
@@ -1198,24 +1191,50 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .appointment-confirm p {
-  font-size: 36px !important;
+  font-size: 2rem !important;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 700;
 }
 .appointment-confirm svg {
   top: 50px !important;
+  margin-bottom: 20px;
 }
 
 .appointment-detail {
-  text-align: center !important;
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-gap: 50px !important;
+  padding: 20px !important;
+  font-size: 1.25rem;
   padding: 10px 0 !important;
   color: #fff !important;
   background-color: #4fc0ec !important;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .appointment-detail p {
-  font-size: 24px !important;
-  background-color: #4fc0ec !important;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 1.5rem !important;
+}
+
+.download-appointment-detail{
+  text-align: right;
+  padding-right: 20px;
+  font-size: 1rem !important;
+}
+.download-appointment-detail a {
+  color: #fff;
+  text-decoration: none;
+}
+.download-appointment-detail:hover {
+  text-decoration: underline;
 }
 
 .identity-items {

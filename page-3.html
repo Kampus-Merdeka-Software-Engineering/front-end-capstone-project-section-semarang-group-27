@@ -37,12 +37,15 @@
         <div class="content-right">
         </div>
     </section>
-
     <div class="login-wrapper">
         <form action="page-4.html">
         <div>
             <label for="" class="label">Full Name</label>
-            <input type="text" class="tumpul-outline-biru" required>
+            <input type="text" class="tumpul-outline-biru" id="fullname" required>
+        </div>
+        <div>
+            <label for="" class="label">Email</label>
+            <input type="email" class="tumpul-outline-biru" id="email" required>
         </div>
 
         <div>
@@ -59,26 +62,22 @@
 
         <div>
             <label for="" class="label">Date of Birth</label>
-            <input type="date" class="tumpul-outline-biru" required>
+            <input type="date" class="tumpul-outline-biru" id="birth" required>
         </div>
 
         <div>
-            <label for="" class="label">Reason for the Visit (Please describe your symptoms or
-                reason for the appointment)</label>
+            <label for="" class="label">Reason for the Visit (Please describe your symptoms or reason for the appointment)</label>
             <input type="text" class="tumpul-outline-biru">
         </div>
 
-       
         <div style="margin-top: 20px;">
-            <input type="checkbox" id="cheklis" required
-            > I confirm that the information provide is accurate.<br> 
-         
-        </div>
+            <input type="checkbox" id="cheklis-1" name="confirm-1" value="confirm-1" required>
+            <label for="cheklis-1">I confirm that the information provide is accurate.</label><br>   
+          </div>
 
         <div style="margin-top: 20px;">
-            <input type="checkbox" id="cheklis" required > I consent that to the appointment 
-            and the sharing of my medical information with the chosen docter.<br>
-            
+            <input type="checkbox" id="cheklis-2" name="confirm-2" value="confirm-2" required>
+            <label for="cheklis-2">I consent that to the appointment and the sharing of my medical information with the chosen docter.</label><br>   
         </div>
 
         <div  style="margin-top: 50px; margin-bottom: 50px">
