@@ -1139,7 +1139,7 @@ header.navbar-container .nav-list li:hover a {
   color: #4fc0ec;
 }
 
-.bg-page4{
+body.bg-page4{
   background: linear-gradient(0deg, rgba(114, 114, 114, 0.50) 0%, rgba(114, 114, 114, 0.50) 100%), url(../assets/img/bg-page4.jpg), lightgray 50% / cover no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1233,7 +1233,7 @@ header.navbar-container .nav-list li:hover a {
   color: #fff;
   text-decoration: none;
 }
-.download-appointment-detail:hover {
+.download-appointment-detail a:hover {
   text-decoration: underline;
 }
 
