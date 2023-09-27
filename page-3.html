@@ -11,7 +11,7 @@
     <title>TwentySevenMedika</title>
 </head>
 <body class="page-tiga-body">
-    <header class="navbar-container-pagetiga">
+    <!-- <header class="navbar-container-pagetiga">
         <div class="logo">
           <img src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
         </div>
@@ -26,7 +26,24 @@
             <li><a href="#" class="masuk" hidden>Sign In</a></li>
           </ul>
         </nav>
+      </header> -->
+      <!-- header start -->
+      <header>
+        <nav>
+          <div class="container-logo">
+            <!-- dibawah ini adalah logo -->
+            <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
+            <label class="nama-company">TwentySevenMedika</label>
+          </div>
+          <ul>
+            <li><a class="border-item-navbar" href="index.html">Home</a></li>
+            <li><a class="border-item-navbar" href="#">About Us</a></li>
+            <li><a class="border-item-navbar" href="page-2.html">Schedule</a></li>
+            <!-- <li><a class="border-item-navbar active" href="page-3.html">Appointment</a></li> -->
+          </ul>
+        </nav>
       </header>
+      <!-- header end -->
     <section class="home-pagetiga" id="home">
         <div class="container home-wrapper">
             <div class="content-left">
@@ -37,15 +54,16 @@
         <div class="content-right">
         </div>
     </section>
+
     <div class="login-wrapper">
-        <form action="page-4.html">
+        <form action="receipt.html">
         <div>
             <label for="" class="label">Full Name</label>
-            <input type="text" class="tumpul-outline-biru" id="fullname" required>
+            <input type="text" class="tumpul-outline-biru" required>
         </div>
         <div>
-            <label for="" class="label">Email</label>
-            <input type="email" class="tumpul-outline-biru" id="email" required>
+            <label for="" class="label">E-mail</label>
+            <input type="email" class="tumpul-outline-biru" required>
         </div>
 
         <div>
@@ -62,35 +80,41 @@
 
         <div>
             <label for="" class="label">Date of Birth</label>
-            <input type="date" class="tumpul-outline-biru" id="birth" required>
+            <input type="date" class="tumpul-outline-biru" required>
         </div>
 
         <div>
-            <label for="" class="label">Reason for the Visit (Please describe your symptoms or reason for the appointment)</label>
+            <label for="" class="label">Reason for the Visit (Please describe your symptoms or
+                reason for the appointment)</label>
             <input type="text" class="tumpul-outline-biru">
         </div>
 
+       <!-- id sebelumnya cheklis diganti jadi confirm biar bisa di klik tulisannya-->
         <div style="margin-top: 20px;">
-            <input type="checkbox" id="cheklis-1" name="confirm-1" value="confirm-1" required>
-            <label for="cheklis-1">I confirm that the information provide is accurate.</label><br>   
-          </div>
+            <input type="checkbox" id="confirm" required name="confirm"
+            > 
+            <label for="confirm"> I confirm that the information provide is accurate. </label><br> 
+         
+        </div>
 
         <div style="margin-top: 20px;">
-            <input type="checkbox" id="cheklis-2" name="confirm-2" value="confirm-2" required>
-            <label for="cheklis-2">I consent that to the appointment and the sharing of my medical information with the chosen docter.</label><br>   
+            <input type="checkbox" id="consent" required name="consent"> 
+            <label for="consent">I consent that to the appointment 
+                and the sharing of my medical information with the chosen docter.</label>
+            <br>
         </div>
 
         <div  style="margin-top: 50px; margin-bottom: 50px">
             <div class="book-btn">
-                <a href="page-4.html">
+                <a href="receipt.html">
                     <input type="submit" value="Book" class="btn-submit"></input>
                 </a>
             </div>
                 
         </div>
         </form>
-
     </div>
+    <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
 </body>
 
 </html>
