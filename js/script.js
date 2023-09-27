@@ -7,12 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
 
     const fullname = document.getElementById('fullname').value;
-    const email = document.getElementById('email').value;
     const gender = document.querySelector('input[name="gender"]:checked');
     const birth = document.getElementById('birth').value;
     const reason = document.getElementById('reason').value;
-    const confirm_1 = document.getElementById('confirm-1').checked;
-    const confirm_2 = document.getElementById('confirm-2').checked;
+    const confirm_1 = document.getElementById('confirm').checked;
+    const confirm_2 = document.getElementById('consent').checked;
 
     message.style.color = 'red';
     if (fullname == '') {
@@ -52,22 +51,22 @@ document.addEventListener('DOMContentLoaded', function () {
 //end of page-3//
 
 //start page-4//
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener('DOMContentLoaded', function () {
   loadContent();
 });
 
 function loadContent() {
   var xhr = new XMLHttpRequest();
 
-  xhr.open("GET", "https://jsonplaceholder.typicode.com/users/", true);
+  xhr.open('GET', 'https://jsonplaceholder.typicode.com/users/', true);
 
   xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-          var users = JSON.parse(xhr.responseText);
-          var rightColumn = document.querySelector(".right-column");
-          var user = users[0];
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var users = JSON.parse(xhr.responseText);
+      var rightColumn = document.querySelector('.right-column');
+      var user = users[0];
 
-            rightColumn.innerHTML = `
+      rightColumn.innerHTML = `
               <p>${user.name}</p>
               <p>${user.username}</p>
               <p>${user.email}</p>
@@ -75,9 +74,8 @@ function loadContent() {
               <p>${user.website}</p>
               <p>${user.company.name}</p>
           `;
-      }
+    }
   };
   xhr.send();
 }
 //end of page-4//
-
