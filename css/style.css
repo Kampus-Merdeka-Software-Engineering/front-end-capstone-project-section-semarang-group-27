@@ -1001,8 +1001,8 @@ header.navbar-container-pagetiga .nav-list li:hover a {
   margin-top: -120px !important;
   color: #727272;
   margin-bottom: -120px;
+  align-items: center;
 }
-
 
 .h2 {
   font-size: 1rem;
@@ -1090,6 +1090,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-top: 0;
   display: block;
   margin-top: 30px;
+  align-items: center;
 }
 
 .btn-submit {
@@ -1103,6 +1104,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  align-items: center;
 }
 
 .btn-submit:hover {
@@ -1112,11 +1114,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .book-btn {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-left: 0;
   margin-top: 0;
-  justify-content: center;
-  display: flex;
 }
 
 /* akhiran css page 3 */
