@@ -1,318 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="assets/img/icon-web.ico" />
-    <title>TwentySevenMedika</title>
-    <style>
-        header nav {
-        align-items: center !important;
-        background-color: #4fc0ec !important;
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
-        color: #fff !important;
-        height: 90px !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        position: fixed !important;
-        top: 0 !important;
-        width: 100% !important;
-        /* margin-bottom: 100px; */
-      }
-      header nav .logo {
-        display: flex !important;
-        flex-direction: row !important;
-        font-family: 'Quicksand ', sans-serif !important;
-        letter-spacing: 1px !important;
-        align-items: center !important;
-        margin-left: 30px !important;
-      }
-      .logo-company {
-        height: 80px !important;
-      }
-      .label-company {
-        margin-left: 30px !important;
-        font-size: 2rem !important;
-        font-family: 'Quicksand', sans-serif !important;
-        font-weight: bold !important;
-      }
-      header nav ul {
-        display: flex !important;
-        justify-content: space-between !important;
-        list-style-type: none !important;
-        width: 35% !important;
-        margin-right: 50px !important;
-        z-index: 300 !important;
-      }
-      header nav ul li {
-        font-size: 1.15em !important;
-      }
-      header nav ul li a {
-        color: #fff !important;
-        transition: all 0.2s ease-in-out !important;
-        /* font-size: 1.15em; */
-        padding: 0.5rem 1.5rem !important;
-        border-radius: 5px !important;
-        text-decoration: none !important;
-      }
-      header nav ul li a:hover {
-        color: #4fc0ec !important;
-        background-color: #fff !important;
-        transition: all 0.2s ease-in-out !important;
-      }
-      .menu-toggle {
-        display: none !important;
-        flex-direction: column !important;
-        height: 20px !important;
-        justify-content: space-between !important;
-        position: relative !important;
-      }
-      .menu-toggle input {
-        cursor: pointer !important;
-        height: 28px !important;
-        left: -6px !important;
-        opacity: 0 !important;
-        position: absolute !important;
-        top: -3px !important;
-        width: 40px !important;
-        z-index: 2 !important;
-      }
-      .menu-toggle span {
-        background-color: #fff !important;
-        border-radius: 3px !important;
-        display: block !important;
-        height: 3px !important;
-        transition: all 0.5s !important;
-        width: 28px !important; 
-      }
-      .menu-toggle span:nth-child(2) {
-        transform-origin: 0 0 !important;
-      }
-      .menu-toggle span:last-child {
-        transform-origin: 0 100% !important;
-      }
-      .menu-toggle input:checked ~ span:nth-child(2) {
-        background-color: #fff !important;
-        transform: rotate(45deg) translate(-1px, -1px) !important;
-      }
-      .menu-toggle input:checked ~ span:nth-child(3) {
-        opacity: 0 !important;
-        transform: scale(0) !important;
-      }
-      .menu-toggle input:checked ~ span:last-child {
-        background-color: #fff !important;
-        transform: rotate(-45deg) translate(-1px) !important;
-      }
-      @media screen and (max-width: 1168px) {
-        header nav ul {
-          width: 50% !important;
-        }
-        .gambar-pertama {
-          width: 30% !important;
-        }
-      }
-      @media screen and (max-width: 768px) {
-        header nav ul {
-          width: 50% !important;
-        }
-        .gambar-pertama {
-          width: 40% !important;
-        }
-      }
-      @media screen and (max-width: 576px) {
-        header {
-          width: 100% !important;
-          z-index: 999 !important;
-        }
-        header nav {
-          justify-content: space-around !important;
-          z-index: 999 !important;
-        }
-        header .menu-toggle,
-        header nav {
-          display: flex !important;
-          z-index: 999 !important;
-        }
-
-        .label-company {
-          margin: 0 !important;
-          font-size: 2.5rem !important;
-          font-family: 'Quicksand', sans-serif !important;
-          z-index: 999 !important;
-        }
-
-        .logo-company {
-          display: none !important;
-          z-index: 999 !important;
-        }
-
-        header nav ul {
-          z-index: 999 !important;
-          align-items: center !important;
-          background-color: #4fc0ec !important;
-          flex-direction: column !important;
-          height: 35vh !important;
-          justify-content: space-evenly !important;
-          opacity: 0 !important;
-          position: absolute !important;
-          left: 0 !important;
-          top: 70px !important;
-          transform: translateX(0) !important;
-          transition: all 2s !important;
-          width: 100% !important;
-          border-bottom-left-radius: 40px !important;
-          border-bottom-right-radius: 40px !important;
-          /* z-index: 300 !important; */
-        }
-        header nav ul li {
-          padding-top: 5px !important;
-          /* z-index: 300 !important; */
-        }
-        header nav ul li a{
-          padding-top: 5px !important;
-          font-size: 2rem !important;
-          /* z-index: 300 !important; */
-        }
-
-        header nav ul.slide {
-          opacity: 1 !important;
-          transform: translateX(100) !important;
-          transition: all 2s !important;
-          z-index: 999 !important;
-        }
-        .btn-submit {
-            background-color: #4fc0ec;
-            /* Green */
-            width: 70%;
-            border: none;
-            border-radius: 10px;
-            color: #ffffff;
-            padding: 15px 35px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            align-items: center;
-            margin-right: 50px;
-        }
-        
-        .login-wrapper {
-        width: 75%;
-        display: flex;
-        justify-content: center;
-        margin-left: 50px;
-        margin-top: -120px !important;
-        color: #727272;
-        margin-bottom: -120px;
-        align-items: center;
-        }
-      }
-    </style>
-</head>
-<body class="page-tiga-body">
-      header start
-    <header>
-     <nav>
-      <div class="logo">
-        <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
-        <p class="label-company">TwentySevenMedika</p>
-      </div>
-
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="page-2.html">About Us</a></li>
-        <li><a href="page-2.html">Schedule</a></li>
-        <li><a href="#appointment" hidden>Appointment</a></li>
-      </ul>
-
-      <div class="menu-toggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-      header end
-    <section class="home-pagetiga" id="home">
-        <div class="container home-wrapper">
-            <div class="content-left">
-                <h1 class="heading">Patient Information</h1>
-                <p class="subheading">Please fill the form below to book appointment</p>
-            </div>
-        </div>
-        <div class="content-right">
-        </div>
-    </section>
-
-    <div class="login-wrapper">
-        <form action="receipt.html">
-            
-            
-            <div style="z-index: 999;">
-                <label for="name" class="label">Full Name</label>
-                <input style="z-index: 1000;" type="email" name="name" class="tumpul-outline-biru" required>
-            </div>
-            <div>
-                <label for="email" class="label">E-mail</label>
-                <input type="email" name="email" class="tumpul-outline-biru" required>
-            </div>
-        <div>
-            <label for="" class="label" style="margin-bottom: 5px;">Gender</label>
-            <label class="radio-container" style="margin-right: 30px;">Male
-                <input type="radio" name="gender" class="blue-radio" required>
-                <span class="checkmark"></span>
-            </label>
-            <label class="radio-container">Female
-                <input type="radio" name="gender" class="blue-radio">
-                <span class="checkmark"></span>
-            </label>
-        </div>
-
-        <div>
-            <label for="" class="label">Date of Birth</label>
-            <input type="date" class="tumpul-outline-biru" required>
-        </div>
-
-        <div>
-            <label for="" class="label">Reason for the Visit (Please describe your symptoms or
-                reason for the appointment)</label>
-            <input type="text" class="tumpul-outline-biru">
-        </div>
-
-       id sebelumnya cheklis diganti jadi confirm biar bisa di klik tulisannya
-        <div style="margin-top: 20px;">
-            <input type="checkbox" id="confirm" required name="confirm"
-            > 
-            <label for="confirm"> I confirm that the information provide is accurate. </label><br> 
-         
-        </div>
-
-        <div style="margin-top: 20px;">
-            <input type="checkbox" id="consent" required name="consent"> 
-            <label for="consent">I consent that to the appointment 
-                and the sharing of my medical information with the chosen docter.</label>
-            <br>
-        </div>
-
-        <div  style="margin-top: 50px; margin-bottom: 50px">
-            <div class="book-btn">
-                <a href="receipt.html">
-                    <input type="submit" value="Book" class="btn-submit"></input>
-                </a>
-            </div>
-                
-        </div>
-        </form>
-    </div>
-    <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
-    <script type="text/javascript" src="js/script.js"></script>
-</body>
-
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -469,7 +154,7 @@
           align-items: center !important;
           background-color: #4fc0ec !important;
           flex-direction: column !important;
-          height: 35vh !important;
+          height: 30vh !important;
           justify-content: space-evenly !important;
           opacity: 0 !important;
           position: absolute !important;
@@ -518,8 +203,8 @@
         width: 75%;
         display: flex;
         justify-content: center;
-        margin-left: 50px;
-        margin-top: -120px !important;
+        margin-left: 60px;
+        margin-top: -70px !important;
         color: #727272;
         margin-bottom: -120px;
         align-items: center;
@@ -529,8 +214,11 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: -350px;
-        margin-left: auto;
+        margin-top: -300px;
+        margin-left: 10px;
+        }
+        .footer-page2 {
+          font-size: 1.2rem !important;
         }
       }
     
@@ -547,8 +235,8 @@
 
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="page-5.html">About Us</a></li>
-        <li><a href="page-2.html">Schedule</a></li>
+        <li><a href="page-2.html">About Us</a></li>
+        <li><a href="page-3.html">Schedule</a></li>
         <li><a href="#appointment" hidden>Appointment</a></li>
       </ul>
 

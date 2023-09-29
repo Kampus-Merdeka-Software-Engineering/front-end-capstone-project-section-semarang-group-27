@@ -78,9 +78,15 @@ function loadContent() {
   };
   xhr.send();
 }
+
+function generatePDF() {
+  const element = document.getElementById('invoice');
+
+  html2pdf().from(element).save();
+}
 //end of page-4//
 
-// add content in device mobile
+// add content in navbar mobile device
 const menuToggle = document.querySelector('.menu-toggle input');
 const nav = document.querySelector('nav ul');
 

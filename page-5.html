@@ -152,7 +152,7 @@
           align-items: center !important;
           background-color: #4fc0ec !important;
           flex-direction: column !important;
-          height: 35vh !important;
+          height: 30vh !important;
           justify-content: space-evenly !important;
           opacity: 0 !important;
           position: absolute !important;
@@ -181,13 +181,18 @@
           transition: all 2s !important;
           z-index: 999 !important;
         }
+        .detail {
+          display: grid !important;
+          grid-template-columns: 2fr 2fr !important;
+          grid-gap: 50px !important;
+          padding: 20px !important;
+          font-size: 1.25rem;
+        }
+        .footer-page2 {
+          font-size: 1.3rem !important;
+        }
       }
 
-      .right-column {
-        text-align: right !important;
-        color: #727272;
-        padding-top: 20px;
-      }
       .identity-items-user {
         padding-top: 20px;
       }
@@ -205,8 +210,8 @@
 
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="page-5.html">About Us</a></li>
-          <li><a href="page-2.html">Schedule</a></li>
+          <li><a href="page-2.html">About Us</a></li>
+          <li><a href="page-3.html">Schedule</a></li>
           <li><a href="#appointment" hidden>Appointment</a></li>
         </ul>
 
@@ -235,11 +240,11 @@
       <div class="appointment-detail">
         <p>Appointment Detail</p>
         <div class="download-appointment-detail">
-          <a href="download.pdf" download>Download PDF</a>
+          <button style="cursor: pointer; font-size: 1rem" onclick="generatePDF()">Download PDF</button>
         </div>
       </div>
       <div>
-        <div class="detail">
+        <div id="invoice" class="detail">
           <div class="left-column">
             <p class="identity-items">Full Name</p>
             <p class="identity-items">Gender</p>
@@ -263,5 +268,6 @@
     </div>
     <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
     <script src="js/script.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
   </body>
 </html>
