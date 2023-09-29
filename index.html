@@ -10,50 +10,209 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/icon-web.ico" />
     <link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.min.css">
-    
-    <!-- <style>
-        .content, .service-content {
-            width: 90%;
-            margin: auto;
+
+    <style>
+      header nav {
+        align-items: center !important;
+        background-color: #4fc0ec !important;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+        color: #fff !important;
+        height: 90px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        position: fixed !important;
+        top: 0 !important;
+        width: 100% !important;
+      }
+      header nav .logo {
+        display: flex !important;
+        flex-direction: row !important;
+        font-family: 'Quicksand ', sans-serif !important;
+        letter-spacing: 1px !important;
+        align-items: center !important;
+        margin-left: 30px !important;
+      }
+      .logo-company {
+        height: 80px !important;
+      }
+      .label-company {
+        margin-left: 30px !important;
+        font-size: 2rem !important;
+        font-family: 'Quicksand', sans-serif !important;
+        font-weight: bold !important;
+      }
+      header nav ul {
+        display: flex !important;
+        justify-content: space-between !important;
+        list-style-type: none !important;
+        width: 35% !important;
+        margin-right: 50px !important;
+        z-index: 300 !important;
+      }
+      header nav ul li {
+        font-size: 1.15em !important;
+      }
+      header nav ul li a {
+        color: #fff !important;
+        transition: all 0.2s ease-in-out !important;
+        /* font-size: 1.15em; */
+        padding: 0.5rem 1.5rem !important;
+        border-radius: 5px !important;
+        text-decoration: none !important;
+      }
+      header nav ul li a:hover {
+        color: #4fc0ec !important;
+        background-color: #fff !important;
+        transition: all 0.2s ease-in-out !important;
+      }
+      .menu-toggle {
+        display: none !important;
+        flex-direction: column !important;
+        height: 20px !important;
+        justify-content: space-between !important;
+        position: relative !important;
+      }
+      .menu-toggle input {
+        cursor: pointer !important;
+        height: 28px !important;
+        left: -6px !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        top: -3px !important;
+        width: 40px !important;
+        z-index: 2 !important;
+      }
+      .menu-toggle span {
+        background-color: #fff !important;
+        border-radius: 3px !important;
+        display: block !important;
+        height: 3px !important;
+        transition: all 0.5s !important;
+        width: 28px !important; 
+      }
+      .menu-toggle span:nth-child(2) {
+        transform-origin: 0 0 !important;
+      }
+      .menu-toggle span:last-child {
+        transform-origin: 0 100% !important;
+      }
+      .menu-toggle input:checked ~ span:nth-child(2) {
+        background-color: #fff !important;
+        transform: rotate(45deg) translate(-1px, -1px) !important;
+      }
+      .menu-toggle input:checked ~ span:nth-child(3) {
+        opacity: 0 !important;
+        transform: scale(0) !important;
+      }
+      .menu-toggle input:checked ~ span:last-child {
+        background-color: #fff !important;
+        transform: rotate(-45deg) translate(-1px) !important;
+      }
+      @media screen and (max-width: 1168px) {
+        header nav ul {
+          width: 50% !important;
+        }
+        .gambar-pertama {
+          width: 30% !important;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        header nav ul {
+          width: 50% !important;
+        }
+        .gambar-pertama {
+          width: 40% !important;
+        }
+      }
+      @media screen and (max-width: 576px) {
+        header {
+          width: 100% !important;
+          z-index: 999 !important;
+        }
+        header nav {
+          justify-content: space-around !important;
+          z-index: 999 !important;
+        }
+        header .menu-toggle,
+        header nav {
+          display: flex !important;
+          z-index: 999 !important;
         }
 
-    </style> -->
+        .label-company {
+          margin: 0 !important;
+          font-size: 2.5rem !important;
+          font-family: 'Quicksand', sans-serif !important;
+          z-index: 999 !important;
+        }
 
+        .logo-company {
+          display: none !important;
+          z-index: 999 !important;
+        }
+
+        header nav ul {
+          z-index: 999 !important;
+          align-items: center !important;
+          background-color: #4fc0ec !important;
+          flex-direction: column !important;
+          height: 35vh !important;
+          justify-content: space-evenly !important;
+          opacity: 0 !important;
+          position: absolute !important;
+          left: 0 !important;
+          top: 70px !important;
+          transform: translateX(0) !important;
+          transition: all 2s !important;
+          width: 100% !important;
+          border-bottom-left-radius: 40px !important;
+          border-bottom-right-radius: 40px !important;
+          /* z-index: 300 !important; */
+        }
+        header nav ul li {
+          padding-top: 5px !important;
+          /* z-index: 300 !important; */
+        }
+        header nav ul li a{
+          padding-top: 5px !important;
+          font-size: 2rem !important;
+          /* z-index: 300 !important; */
+        }
+
+        header nav ul.slide {
+          opacity: 1 !important;
+          transform: translateX(100) !important;
+          transition: all 2s !important;
+          z-index: 999 !important;
+        }
+      }
+    </style>
      
 </head>
 <body>
 
-<!-- header --> 
+<!-- header start --> 
 
-<!-- <header class="navbar-container">
-    <div class="logo">
-      <img src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
-    </div>
-    <div class="nama-company">
-      <p class="paragraf-nama">TwentySevenMedika</p>
-    </div>
-    <nav class="nav-list">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="schedules.html">Schedule</a></li>
-        <li><a href="#" class="masuk" hidden>Sign In</a></li>
-      </ul>
-    </nav>
-  </header> -->
   <header>
     <nav>
-      <div class="container-logo">
-        <!-- dibawah ini adalah logo -->
+      <div class="logo">
         <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
-        <label class="nama-company">TwentySevenMedika</label>
+        <p class="label-company">TwentySevenMedika</p>
       </div>
+
       <ul>
-        <li><a class="border-item-navbar active" href="index.html">Home</a></li>
-        <li><a class="border-item-navbar" href="#">About Us</a></li>
-        <li><a class="border-item-navbar" href="schedules.html">Schedule</a></li>
-        <!-- <li><a class="border-item-navbar" href="page-3.html">Appointment</a></li> -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="page-2.html">About Us</a></li>
+        <li><a href="page-2.html">Schedule</a></li>
+        <li><a href="#appointment" hidden>Appointment</a></li>
       </ul>
+
+      <div class="menu-toggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </nav>
   </header>
 
@@ -66,7 +225,7 @@
         <h3>Your Health, Your Schedule, Your Clinic</h3>
         <span></span>
         <p>You have the power to book your doctor's schedule on your terms. No more waiting on hold or juggling with conflicting schedules. Experience the convenience of modern healthcare with just a few clicks.</p>
-        <a href="schedules.html" class="btn">Book Now</a>
+        <a href="page-2.html" class="btn">Book Now</a>
     </div>
 </section>
 
@@ -166,5 +325,14 @@
         </div>
    </footer>
  
+   <script>
+     const menuToggle = document.querySelector('.menu-toggle input');
+      const nav = document.querySelector('nav ul');
+
+      menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('slide');
+      });
+   </script>
+
 </body>
  </html>

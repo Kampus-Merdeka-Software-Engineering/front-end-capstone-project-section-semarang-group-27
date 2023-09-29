@@ -1,302 +1,401 @@
-<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
+    <title>About Us</title>
+    <link rel="stylesheet" href="page about us.css">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twenty Seven Medika</title>
-    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="icon" href="assets/img/icon-web.ico" />
-    
+    <link rel="icon" href="icon-web.ico" />
+    <link rel="stylesheet" href="css/style.css">
     <style>
-      .title-area {
-            text-align: center;
-            color: black
-        }
+      header nav {
+        align-items: center;
+        background-color: #4fc0ec;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+        color: #fff;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+      header nav .logo {
+        display: flex;
+        flex-direction: row;
+        font-family: 'Quicksand ', sans-serif;
+        letter-spacing: 1px;
+        align-items: center;
+        margin-left: 30px;
+      }
+      .logo-company {
+        height: 80px;
+      }
+      .label-company {
+        margin-left: 30px;
+        font-size: 2rem;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: bold;
+      }
+      header nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 35%;
+        margin-right: 50px;
+        z-index: 300;
+      }
+      header nav ul li {
+        font-size: 1.15em;
+      }
+      header nav ul li a {
+        color: #fff;
+        transition: all 0.2s ease-in-out;
+        /* font-size: 1.15em; */
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        text-decoration: none;
+      }
+      header nav ul li a:hover {
+        color: #4fc0ec;
+        background-color: #fff;
+        transition: all 0.2s ease-in-out;
+      }
+      .menu-toggle {
+        display: none;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        position: relative;
+      }
+      .menu-toggle input {
+        cursor: pointer;
+        height: 28px;
+        left: -6px;
+        opacity: 0;
+        position: absolute;
+        top: -3px;
+        width: 40px;
+        z-index: 2;
+      }
+      .menu-toggle span {
+        background-color: #fff;
+        border-radius: 3px;
+        display: block;
+        height: 3px;
+        transition: all 0.5s;
+        width: 28px;
+      }
+      .menu-toggle span:nth-child(2) {
+        transform-origin: 0 0;
+      }
+      .menu-toggle span:last-child {
+        transform-origin: 0 100%;
+      }
+      .menu-toggle input:checked ~ span:nth-child(2) {
+        background-color: #fff;
+        transform: rotate(45deg) translate(-1px, -1px);
+      }
+      .menu-toggle input:checked ~ span:nth-child(3) {
+        opacity: 0;
+        transform: scale(0);
+      }
+      .menu-toggle input:checked ~ span:last-child {
+        background-color: #fff;
+        transform: rotate(-45deg) translate(-1px);
+      }
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
 
-        .doctor-area, .date-area {
-          border-right: 3px solid black;
-        }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-        .details-area {
-          margin: auto;
-          width: 80%;
-          display: flex;
-          justify-content: space-around;
-          border: 3px solid black;
-          border-radius: 4px;
-        }
+body {
+  height: 100vh;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
 
-        .doctor-area {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+header.navbar-container {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #4fc0ec;
+  padding-block: 1rem;
+  z-index: 999;
+  height: 96px;
+  position: fixed;
+}
 
-            padding: 5px;
-        }
+.masuk {
+  background-color: #fff;
+  color: #4fc0ec !important;
+}
+.masuk:hover {
+  border: 2px solid #fff !important;
+  color: #fff !important;
+  background-color: #4fc0ec !important;
+}
 
-        .doctor-image {
-            width: 55%;
-        }
+header.navbar-container .logo img {
+  width: 90px;
+  margin-left: -100px;
+}
 
-        .category-area {
-            margin: auto;
-            width: 80%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 40px;
-        }
-        .category-box {
-            padding: 10px;;
-            color: #4fc0ec;
-            border: 3px solid #4fc0ec;
-            border-radius: 10px;
-            font-size: 20px;
-        }
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
 
-        .date-area {
-            width: 50%;
-            display: flex;
-              flex-flow: row wrap;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px;
+.paragraf-nama {
+  margin-left: -280px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
 
-        }
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+}
 
-        .time-area {
-            width: 25%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            padding: 10px;
-        }
+header.navbar-container .nav-list li:hover a {
+  background-color: #fff;
+  color: #4fc0ec;
+}
+/* end of nav bar */
 
-        .time-box {
-          display: block;
-          margin: auto;
-          padding: 10px;
-            color: black;
-            text-align: center;
-            border-bottom: solid 3px black;
-          }
+/* start content */
+.title h1{
+  text-align: center;
+  margin-top: 150px;
+  font-family: 'Quicksand', sans-serif;
+  color: #727272;
+  
+}
+.title p {
+  font-size: 15px;
+  font-style: bold;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  color: #727272;
+  bottom: 3rem;
+}
 
-        .date-box {
-            display: inline-block;
-            padding: 10px;
-            background-color:rgb(65, 157, 255);
-            color: balck;
-            border-radius: 4px;
-        }
+.container {
+    position: absolute;
+    padding-top: 180px;
+    width: 100%;
+    margin: auto;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;   
+  }
+  .column {
+    float: left;
+    width: 30%;
+    padding: 22px;
+    height: 300px; 
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 28px;
+    flex: 1 1 45rem;
+  }
+  
+  /*
+  .middle {
+    width: 50%;
+  }
 
-        .date-box:hover, .category-box:hover {
-            cursor: pointer;
-        }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
 
-        .selected {
-            background-color: #4fc0ec;
-            color: white;
-        }
+  .box-text {
+    background-color: #4fc0eb;
+    color: #ffffff;
+    shape-outside: padding-box;
+    width: 350px; 
+    position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 15px;
+  }
+  .column img {
+    display: flex center;
+    max-width: 350px;
+  }
 
-        .bookingButton {
-          background-color: blue;
-          text-decoration: none;
-          margin: 0 auto;
-        }
 
-        .bookingButton button {
-          background-color:rgb(113, 255, 65);
-          padding: 20px;
-        }
+/*responsive*/
 
-        .results {
-            margin-top: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            color: black;
-            font-family: sans-serif;
-        }
+@media (max-width: 991px) {
+  
+  /* html {
+    font-size: 55%;
+  }
 
-        .result-details {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-        }
+  header {
+    padding: 2rem;
+  }
 
-        .result-details p {
-          padding: 24px;
-          background-color: #4fc0ec;
+  section { 
+    padding: 2rem;
+  } 
 
-        }
+
+  .section-title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  } */
+  
+  
+  .container {
+    padding: 20px 20px;
+    width: 80%;
+    padding-top: 200px;
+    margin-left: 70px;
+  
+  }
+  
+  .column {
+    width: 40%;
+    height: 150px;
+   
+  }
+
+  .box-text {
+    width: 40%;
+    font-size: 80%;
+  
+  }
+  .column img {
+    margin-left: 40%;
+  }
+
+ 
+  
+  /* .service-icon i{
+    width: 9rem;
+    height: 9rem;
+  } */
+
+}
     </style>
   </head>
   <body>
-
     <header>
       <nav>
-        <div class="container-logo">
-          <!-- dibawah ini adalah logo -->
+        <div class="logo">
           <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
-          <label class="nama-company">TwentySevenMedika</label>
+          <p class="label-company">TwentySevenMedika</p>
         </div>
+
         <ul>
-          <li><a class="border-item-navbar" href="index.html">Home</a></li>
-          <li><a class="border-item-navbar" href="#">About Us</a></li>
-          <li><a class="border-item-navbar active" href="schedules.html">Schedule</a></li>
-          <!-- <li><a class="border-item-navbar" href="patient-form.html">Appointment</a></li> -->
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#appointment" hidden>Appointment</a></li>
         </ul>
+
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
     </header>
-
-    <!-- End Header -->
-    <!-- Content -->
-    <main class="main-content">
-      <h1 class="dokter-kita">Our Doctors</h1>
-      <div class="category-area">
-            <div class="category-box">
-                <p>General Doctor</p>
-            </div>
-            <div class="category-box">
-                <p>Pediatrician</p>
-            </div>
-            <div class="category-box">
-                <p>Ear Nose Throat</p>
-            </div>
-            <div class="category-box">
-                <p>Dentist</p>
-            </div>
-            <div class="category-box">
-                <p>Gynecology</p>
-            </div>
-            <div class="category-box">
-                <p>Cardiology</p>
-            </div>
-        </div>
-
-      <div class="details-area">    
-            <div class="doctor-area">
-                <img class="doctorsImage" src="assets/img/gambar-dokter.png" alt="dokter dokter" />
-                <p class="doctorsName"> Endang Sukasari </p>
-              </div>
-
-
-             <div class="date-area">
-                <div class="date-box">
-                    <p>Senin, 25 September 2023</p>
-                </div>
-                <div class="date-box">
-                    <p>Selasa, 26 September 2023</p>
-                </div>
-                <div class="date-box">
-                    <p>Rabu, 27 September 2023</p>
-                </div>
-                <div class="date-box">
-                    <p>Kamis, 28 September 2023</p>
-                </div>
-                <div class="date-box">
-                    <p>Jumat, 29 September 2023</p>
-                </div>
-            </div>
-
-             <div class="time-area">
-                <div class="time-box">
-                    <p>08:00 - 09:00</p>
-                </div>
-                <div class="time-box">
-                    <p>10:00 - 11:00</p>
-                </div>
-                <div class="time-box">
-                    <p>13:00 - 14:00</p>
-                </div>
-                <div class="bookingButton">
-                    <a href="patient-form.html"><button>Make Appointment</button></a>
-                </div>
-            </div>
-
-        </div>
-
-      <div class="results">
-        <div class="result-details">
-          <p id="res-cat">None</p>
-          <p id="res-doc">None</p>
-          <p id="res-date">None</p>
-          <p id="res-time">None</p>
-        </div>  
+    <!-- <header class="navbar-container">
+      <div class="logo">
+        <img src= "https://c.animaapp.com/FO4ixZQ9/img/reference-logo2.png" alt="Dicoding Indonesia" />
       </div>
-      </main>
-    <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
-    <!-- End Content -->
-    <!-- Testing branch baru -->
-    <script>
-        let boxes = document.querySelectorAll('.category-box');
-        let selectedCategory = document.getElementById('res-cat');
-        boxes.forEach(function (box) {
-            box.addEventListener('click', function () {
-                // Add "selected" class to the clicked category box
-                if (box.classList.contains('selected')) {
-                    box.classList.remove('selected');
-                    selectedCategory.textContent = "None";
-                } else {
-                    boxes.forEach(function (el) {
-                        // Remove "selected" class from all category boxes
-                    el.classList.remove('selected');
-                });
-                    box.classList.add('selected');
-                    selectedCategory.textContent = box.querySelector('p').textContent;
-                }
-            });
-        });
+      <div class="nama-company">
+        <p class="paragraf-nama">TwentySevenMedika</p>
+      </div>
+      <nav class="nav-list">
+        <ul>
+          <li><a href="page-dua-general-doctor.html">Home</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Schedule</a></li>
+          <li><a href="#" class="masuk">Sign In</a></li>
+        </ul>
+      </nav>
+    </header> -->
+<!-- end header -->
 
-        let dates = document.querySelectorAll('.date-box');
-        let selectedDates = document.getElementById('res-date');
-        dates.forEach(function (date) {
-            date.addEventListener('click', function () {
-                // Add "selected" class to the clicked date box
-                if (date.classList.contains('selected')) {
-                    date.classList.remove('selected');
-                    selectedDates.textContent = "None";
-                } else {
-                    // Remove "selected" class from all dates boxes
-                    dates.forEach(function (el) {
-                    el.classList.remove('selected');
-                });
-                    date.classList.add('selected');
-                    selectedDates.textContent = date.querySelector('p').textContent;
-                }
+<div class="title">
+    <h1>About Us</h1>
+    <p>TwentySevenMedika Groub</p>
+</div>
 
-            });
-        });
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img src="assets/img/img1.png" alt="Ummu" style="width:60%;">
+      <div class="box-text"> 
+        <h3>Ummu Hanni Turhaby</h2>
+        <p>Project Leader</p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="assets/img/img3.png" alt="Zetha" style="width: 60%;">
+      <div class="box-text"> 
+        <h3>Zetha Aulizna Permana</h2>
+        <p>Front-end</p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="assets/img/img3.png" alt="Kiki" style="width: 60%;">
+      <div class="box-text"> 
+        <h3>Kiki Wulansari</h2>
+        <p>Front-end</p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="assets/img/img1.png" alt="Alda" style="width:60%;">
+      <div class="box-text"> 
+        <h3>Alda Nabila Putri</h2>
+        <p>Back-end</p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="assets/img/img5.png" alt="Danni" style="width: 55%;">
+      <div class="box-text"> 
+        <h3>Danni Adhyatma Rachman</h2>
+        <p>Back-end</p>
+      </div>
+    </div>
+    <div class="column">
+      <img src="assets/img/img5.png" alt="Rayhan" style="width: 60%;">
+      <div class="box-text"> 
+        <h3>Muhammad Rayhan Nur</h2>
+        <p>Quality Assurance</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-        let times = document.querySelectorAll('.time-box');
-        let selectedTime = document.getElementById('res-time');
-        times.forEach(function (time) {
-            time.addEventListener('click', function () {
-                // Add "selected" class to the clicked time box
-                if (time.classList.contains('selected')) {
-                    time.classList.remove('selected');
-                    selectedTime.textContent = "None";
-                } else {
-                    // Remove "selected" class from all dates boxes
-                    times.forEach(function (el) {
-                    el.classList.remove('selected');
-                });
-                    time.classList.add('selected');
-                    selectedTime.textContent = time.querySelector('p').textContent;
-                }
-
-            });
-        });
-
-        let selectedDoctor = document.getElementById('res-doc');
-        selectedDoctor.textContent = document.querySelector('.doctorsName').textContent;
-
-    </script>
-  </body>
+</body>
 </html>

@@ -34,12 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
-    if (confirm_1 == false) {
+    if (confirm_1 == true) {
       message.textContent = 'Register gagal. syarat & ketentuan harus dicentang.';
       return;
     }
 
-    if (confirm_2 == false) {
+    if (confirm_2 == true) {
       message.textContent = 'Register gagal. syarat & ketentuan harus dicentang.';
       return;
     }
@@ -67,15 +67,23 @@ function loadContent() {
       var user = users[0];
 
       rightColumn.innerHTML = `
-              <p>${user.name}</p>
-              <p>${user.username}</p>
-              <p>${user.email}</p>
-              <p>${user.phone}</p>
-              <p>${user.website}</p>
-              <p>${user.company.name}</p>
+              <p>${user.name}</p> </br>
+              <p>${user.username}</p> </br>
+              <p>${user.email}</p> </br>
+              <p>${user.phone}</p> </br>
+              <p>${user.website}</p> </br>
+              <p>${user.company.name}</p> </br>
           `;
     }
   };
   xhr.send();
 }
 //end of page-4//
+
+// add content in device mobile
+const menuToggle = document.querySelector('.menu-toggle input');
+const nav = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', function () {
+  nav.classList.toggle('slide');
+});
