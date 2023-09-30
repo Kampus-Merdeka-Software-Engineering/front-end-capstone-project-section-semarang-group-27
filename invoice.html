@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TwentySevenMedika</title>
-
-    <!-- css -->
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twenty Seven Medika</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="icon" href="assets/img/icon-web.ico" />
-    <link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.min.css">
-
     <style>
       header nav {
         align-items: center !important;
@@ -55,6 +51,7 @@
       header nav ul li a {
         color: #fff !important;
         transition: all 0.2s ease-in-out !important;
+        /* font-size: 1.15em; */
         padding: 0.5rem 1.5rem !important;
         border-radius: 5px !important;
         text-decoration: none !important;
@@ -87,7 +84,7 @@
         display: block !important;
         height: 3px !important;
         transition: all 0.5s !important;
-        width: 28px !important; 
+        width: 28px !important;
       }
       .menu-toggle span:nth-child(2) {
         transform-origin: 0 0 !important;
@@ -170,7 +167,7 @@
         header nav ul li {
           padding-top: 5px !important;
         }
-        header nav ul li a{
+        header nav ul li a {
           padding-top: 5px !important;
           font-size: 2rem !important;
         }
@@ -181,154 +178,93 @@
           transition: all 2s !important;
           z-index: 999 !important;
         }
+        .detail {
+          display: grid !important;
+          grid-template-columns: 2fr 2fr !important;
+          grid-gap: 50px !important;
+          padding: 20px !important;
+          font-size: 1.25rem;
+        }
+        .footer-page2 {
+          font-size: 1.3rem !important;
+        }
+      }
+
+      .identity-items-user {
+        padding-top: 20px;
       }
     </style>
-     
-</head>
-<body>
+  </head>
+  <body class="bg-page4">
+    <!-- header start -->
 
-<!-- header start --> 
+    <header>
+      <nav>
+        <div class="logo">
+          <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
+          <p class="label-company">TwentySevenMedika</p>
+        </div>
 
-  <header>
-    <nav>
-      <div class="logo">
-        <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
-        <p class="label-company">TwentySevenMedika</p>
-      </div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="#appointment" hidden>Appointment</a></li>
+        </ul>
 
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
-        <li><a href="#appointment" hidden>Appointment</a></li>
-      </ul>
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
 
-      <div class="menu-toggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </nav>
-  </header>
-
-<!-- end header -->
-
-<!-- section --> 
-
-<section class="home" id="home">
-    <div class="content">
-        <h3>Your Health, Your Schedule, Your Clinic</h3>
-        <span></span>
-        <p>You have the power to book your doctor's schedule on your terms. No more waiting on hold or juggling with conflicting schedules. Experience the convenience of modern healthcare with just a few clicks.</p>
-        <a href="schedule.html" class="btn">Book Now</a>
+    <!-- header end -->
+    <div class="appointment-confirm">
+      <p>Appointment confirmed!</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="168" height="168" viewBox="0 0 168 168" fill="none">
+        <path
+          d="M84 10.5C103.493 10.5 122.188 18.2437 135.972 32.0277C149.756 45.8116 157.5 64.5066 157.5 84C157.5 103.493 149.756 122.188 135.972 135.972C122.188 149.756 103.493 157.5 84 157.5C64.5066 157.5 45.8116 149.756 32.0277 135.972C18.2437 122.188 10.5 103.493 10.5 84C10.5 64.5066 18.2437 45.8116 32.0277 32.0277C45.8116 18.2437 64.5066 10.5 84 10.5ZM74.844 98.5005L58.5165 82.1625C57.9312 81.5772 57.2363 81.1129 56.4715 80.7961C55.7067 80.4793 54.887 80.3162 54.0592 80.3162C53.2315 80.3162 52.4118 80.4793 51.647 80.7961C50.8822 81.1129 50.1873 81.5772 49.602 82.1625C48.4199 83.3446 47.7557 84.948 47.7557 86.6198C47.7557 88.2915 48.4199 89.8949 49.602 91.077L70.392 111.867C70.9757 112.455 71.67 112.922 72.435 113.241C73.2 113.559 74.0205 113.723 74.8493 113.723C75.6779 113.723 76.4985 113.559 77.2635 113.241C78.0285 112.922 78.7228 112.455 79.3065 111.867L122.356 68.8065C122.95 68.2236 123.422 67.529 123.745 66.7628C124.068 65.9966 124.237 65.174 124.241 64.3424C124.244 63.5108 124.084 62.6866 123.767 61.9174C123.451 61.1483 122.986 60.4493 122.398 59.8609C121.81 59.2725 121.112 58.8063 120.343 58.4892C119.574 58.172 118.75 58.0102 117.919 58.0131C117.087 58.016 116.264 58.1835 115.498 58.506C114.731 58.8285 114.036 59.2995 113.452 59.892L74.844 98.5005Z"
+          fill="#45E51F"
+        />
+        <path d="M54 87L74 107" stroke="white" stroke-width="14" stroke-linecap="round" />
+        <path d="M118 65L75 108" stroke="white" stroke-width="14" stroke-linecap="round" />
+      </svg>
     </div>
-</section>
-
-<!-- end section --> 
-
-<br><br><br>
-
-<!--Start services Section-->
-<div class="our-services">
-  <div class="service-content">
-      <div class="left-service-content">
-          <h1>Experience the Future of Healthcare</h1>
-          <p>Book Your Doctor's Appointment Online, Anytime, Anywhere</p>
-          <br><br><br><br><br><br>
-          <h2>Available Specialities</h2>
+    <div class="wrap-detail">
+      <div class="appointment-detail">
+        <p>Appointment Detail</p>
+        <div class="download-appointment-detail">
+          <button style="cursor: pointer; font-size: 1rem" onclick="generatePDF()">Download PDF</button>
+        </div>
       </div>
-
-  <div class="main-services">
-      <div class="inner-services-content">
-          <div class="service-icon">
-            <a href="schedule/general"><i class="fas fa-stethoscope"></i></a>
+      <div>
+        <div id="invoice" class="detail">
+          <div class="left-column">
+            <p class="identity-items">Full Name</p>
+            <p class="identity-items">Gender</p>
+            <p class="identity-items">Date of Birth</p>
+            <p class="identity-items">Specialist</p>
+            <p class="identity-items">Appointment Date</p>
+            <p class="identity-items">Appointment Time</p>
+            <p class="identity-items">Reason for the Visit</p>
           </div>
-          <h2>General Doctor</h2>
-          
-      </div>
-
-      <div class="inner-services-content">
-          <div class="service-icon">
-            <a href="schedule/pedriatician"><i class="fas fa-child"></i></a>
+          <div class="right-column">
+            <p class="identity-items-user"></p>
+            <p class="identity-items-user"></p>
+            <p class="identity-items-user"></p>
+            <p class="identity-items-user"></p>
+            <p class="identity-items-user"></p>
+            <p class="identity-items-user"></p>
+            <p class="identity-items-user"></p>
           </div>
-          <h2>Pedriatician</h2>
-      </div>
-
-      <div class="inner-services-content">
-          <div class="service-icon">
-            <a href="schedule/ent"><i class="fas fa-deaf"></i></a>
-          </div>
-          <h2>Ear Nose Throat</h2>
-      </div>
-
-
-      <div class="inner-services-content">
-        <div class="service-icon">
-            <a href="schedule/dentist"><i class="fas fa-tooth"></i></a>
         </div>
-        <h2>Dentist</h2>
       </div>
-      
-      
-      <div class="inner-services-content">
-        <div class="service-icon">
-            <a href="schedule/gynecology"><i class="fas fa-baby"></i></a>
-        </div>
-        <h2>Gynecology</h2>
-      </div>
-      
-      
-      <div class="inner-services-content">
-        <div class="service-icon">
-            <a href="schedule/cardiology"><i class="fas fa-heartbeat"></i></a>
-        </div>
-        <h2>Cardiology</h2>
-      </div>
-  </div>
-</div>
-
-<br><br><br><br>
-
-<!--End services Section-->
-
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="row">
-                <div class="footer-wa">
-                    <h4>Contact</h4>
-                    <div class="whatsapp">
-                        <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.whatsapp.com/">+6285235</a>
-                    </div>
-                    <ul>
-                        <li><a href="https://www.google.com/maps/place/RevoU/@-6.2271636,106.825491,18z/data=!3m2!4b1!5s0x2e69f3e50d8b6585:0x6551a5f9f5abc800!4m6!3m5!1s0x2e69f3e4734a8de3:0xb2ad7eacc88d7f3e!8m2!3d-6.2271655!4d106.826428!16s%2Fg%2F11r0wt4m51?entry=ttu">Jl. DR. Ide Anak Agung Gde Agung  RT.5/RW.2, Kuningan
-                            Jakarta Selatan 12950</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-2xl"></i></a>
-                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-   </footer>
- 
-   <script>
-     const menuToggle = document.querySelector('.menu-toggle input');
-      const nav = document.querySelector('nav ul');
-
-      menuToggle.addEventListener('click', function () {
-        nav.classList.toggle('slide');
-      });
-   </script>
-
-</body>
- </html>
+    </div>
+    <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
+    <script src="js/script.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+  </body>
+</html>

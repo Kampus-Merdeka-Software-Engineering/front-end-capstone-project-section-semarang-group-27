@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TwentySevenMedika</title>
-
-    <!-- css -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/img/icon-web.ico" />
-    <link rel="stylesheet" href="assets/fontawesome-free-5.15.3-web/css/all.min.css">
-
+    
+    <title>TwentySevenMedika</title>
     <style>
-      header nav {
+        header nav {
         align-items: center !important;
         background-color: #4fc0ec !important;
         box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
@@ -55,6 +53,7 @@
       header nav ul li a {
         color: #fff !important;
         transition: all 0.2s ease-in-out !important;
+        /* font-size: 1.15em; */
         padding: 0.5rem 1.5rem !important;
         border-radius: 5px !important;
         text-decoration: none !important;
@@ -166,13 +165,16 @@
           width: 100% !important;
           border-bottom-left-radius: 40px !important;
           border-bottom-right-radius: 40px !important;
+          /* z-index: 300 !important; */
         }
         header nav ul li {
           padding-top: 5px !important;
+          /* z-index: 300 !important; */
         }
         header nav ul li a{
           padding-top: 5px !important;
           font-size: 2rem !important;
+          /* z-index: 300 !important; */
         }
 
         header nav ul.slide {
@@ -181,16 +183,51 @@
           transition: all 2s !important;
           z-index: 999 !important;
         }
+        .btn-submit {
+            background-color: #4fc0ec;
+            /* Green */
+            width: 70%;
+            border: none;
+            border-radius: 10px;
+            color: #ffffff;
+            padding: 15px 35px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            align-items: center;
+            margin-right: 50px;
+        }
+        
+        .login-wrapper {
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        margin-left: 60px;
+        margin-top: -70px !important;
+        color: #727272;
+        margin-bottom: -120px;
+        align-items: center;
+        }
+
+        .home-pagetiga .home-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: -300px;
+        margin-left: 10px;
+        }
+        .footer-page2 {
+          font-size: 1.2rem !important;
+        }
       }
+    
     </style>
-     
 </head>
-<body>
-
-<!-- header start --> 
-
-  <header>
-    <nav>
+<body class="page-tiga-body">
+      <!-- header start -->
+    <header>
+     <nav>
       <div class="logo">
         <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
         <p class="label-company">TwentySevenMedika</p>
@@ -198,8 +235,8 @@
 
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="page-2.html">About Us</a></li>
+        <li><a href="page-3.html">Schedule</a></li>
         <li><a href="#appointment" hidden>Appointment</a></li>
       </ul>
 
@@ -211,124 +248,78 @@
       </div>
     </nav>
   </header>
-
-<!-- end header -->
-
-<!-- section --> 
-
-<section class="home" id="home">
-    <div class="content">
-        <h3>Your Health, Your Schedule, Your Clinic</h3>
-        <span></span>
-        <p>You have the power to book your doctor's schedule on your terms. No more waiting on hold or juggling with conflicting schedules. Experience the convenience of modern healthcare with just a few clicks.</p>
-        <a href="schedule.html" class="btn">Book Now</a>
-    </div>
-</section>
-
-<!-- end section --> 
-
-<br><br><br>
-
-<!--Start services Section-->
-<div class="our-services">
-  <div class="service-content">
-      <div class="left-service-content">
-          <h1>Experience the Future of Healthcare</h1>
-          <p>Book Your Doctor's Appointment Online, Anytime, Anywhere</p>
-          <br><br><br><br><br><br>
-          <h2>Available Specialities</h2>
-      </div>
-
-  <div class="main-services">
-      <div class="inner-services-content">
-          <div class="service-icon">
-            <a href="schedule/general"><i class="fas fa-stethoscope"></i></a>
-          </div>
-          <h2>General Doctor</h2>
-          
-      </div>
-
-      <div class="inner-services-content">
-          <div class="service-icon">
-            <a href="schedule/pedriatician"><i class="fas fa-child"></i></a>
-          </div>
-          <h2>Pedriatician</h2>
-      </div>
-
-      <div class="inner-services-content">
-          <div class="service-icon">
-            <a href="schedule/ent"><i class="fas fa-deaf"></i></a>
-          </div>
-          <h2>Ear Nose Throat</h2>
-      </div>
-
-
-      <div class="inner-services-content">
-        <div class="service-icon">
-            <a href="schedule/dentist"><i class="fas fa-tooth"></i></a>
-        </div>
-        <h2>Dentist</h2>
-      </div>
-      
-      
-      <div class="inner-services-content">
-        <div class="service-icon">
-            <a href="schedule/gynecology"><i class="fas fa-baby"></i></a>
-        </div>
-        <h2>Gynecology</h2>
-      </div>
-      
-      
-      <div class="inner-services-content">
-        <div class="service-icon">
-            <a href="schedule/cardiology"><i class="fas fa-heartbeat"></i></a>
-        </div>
-        <h2>Cardiology</h2>
-      </div>
-  </div>
-</div>
-
-<br><br><br><br>
-
-<!--End services Section-->
-
-
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="row">
-                <div class="footer-wa">
-                    <h4>Contact</h4>
-                    <div class="whatsapp">
-                        <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
-                        <a href="https://www.whatsapp.com/">+6285235</a>
-                    </div>
-                    <ul>
-                        <li><a href="https://www.google.com/maps/place/RevoU/@-6.2271636,106.825491,18z/data=!3m2!4b1!5s0x2e69f3e50d8b6585:0x6551a5f9f5abc800!4m6!3m5!1s0x2e69f3e4734a8de3:0xb2ad7eacc88d7f3e!8m2!3d-6.2271655!4d106.826428!16s%2Fg%2F11r0wt4m51?entry=ttu">Jl. DR. Ide Anak Agung Gde Agung  RT.5/RW.2, Kuningan
-                            Jakarta Selatan 12950</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h4>follow us</h4>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f fa-2xl"></i></a>
-                        <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+      <!-- header end -->
+    <section class="home-pagetiga" id="home">
+        <div class="container home-wrapper">
+            <div class="content-left">
+                <h1 class="heading">Patient Information</h1>
+                <p class="subheading">Please fill the form below to book appointment</p>
             </div>
         </div>
-   </footer>
- 
-   <script>
-     const menuToggle = document.querySelector('.menu-toggle input');
-      const nav = document.querySelector('nav ul');
+        <div class="content-right">
+        </div>
+    </section>
 
-      menuToggle.addEventListener('click', function () {
-        nav.classList.toggle('slide');
-      });
-   </script>
+    <div class="login-wrapper">
+        <form style="z-index: 5;" action="invoice.html">
+        <div>
+            <label for="name" class="label">Full Name</label>
+            <input type="text" name="name" class="tumpul-outline-biru" required>
+        </div>
+        <div>
+            <label for="email" class="label">E-mail</label>
+            <input type="email" name="email" class="tumpul-outline-biru" required>
+        </div>
 
+        <div>
+            <label class="label" style="margin-bottom: 5px;">Gender</label>
+            <label class="radio-container" style="margin-right: 30px;">Male
+                <input type="radio" name="gender" class="blue-radio" required>
+                <span class="checkmark"></span>
+            </label>
+            <label class="radio-container">Female
+                <input type="radio" name="gender" class="blue-radio">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+
+        <div>
+            <label class="label">Date of Birth</label>
+            <input type="date" class="tumpul-outline-biru" required>
+        </div>
+
+        <div>
+            <label class="label">Reason for the Visit (Please describe your symptoms or
+                reason for the appointment)</label>
+            <input type="text" class="tumpul-outline-biru">
+        </div>
+
+       <!-- id sebelumnya cheklist diganti jadi confirm biar bisa di klik tulisannya-->
+        <div style="margin-top: 20px;">
+            <input type="checkbox" id="confirm" required name="confirm"
+            > 
+            <label for="confirm"> I confirm that the information provide is accurate. </label><br> 
+         
+        </div>
+
+        <div style="margin-top: 20px;">
+            <input type="checkbox" id="consent" required name="consent"> 
+            <label for="consent">I consent that to the appointment 
+                and the sharing of my medical information with the chosen docter.</label>
+            <br>
+        </div>
+
+        <div  style="margin-top: 50px; margin-bottom: 50px">
+            <div class="book-btn">
+                <a href="invoice.html">
+                    <input src="invoice.html" type="submit" value="Book" class="btn-submit"></input>
+                </a>
+            </div>      
+        </div>
+        </form>
+    </div>
+    <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
+    <script src="js/script.js"></script>
 </body>
- </html>
+
+</html>
