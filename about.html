@@ -158,7 +158,7 @@
           align-items: center !important;
           background-color: #4fc0ec !important;
           flex-direction: column !important;
-          height: 30vh !important;
+          height: 25vh !important;
           justify-content: space-evenly !important;
           opacity: 0 !important;
           position: absolute !important;
@@ -169,16 +169,13 @@
           width: 100% !important;
           border-bottom-left-radius: 40px !important;
           border-bottom-right-radius: 40px !important;
-          /* z-index: 300 !important; */
         }
         header nav ul li {
           padding-top: 5px !important;
-          /* z-index: 300 !important; */
         }
         header nav ul li a{
           padding-top: 5px !important;
           font-size: 1.2rem !important;
-          /* z-index: 300 !important; */
         }
 
         header nav ul.slide {
@@ -202,53 +199,37 @@
         .title p{
           font-size: 1rem !important;
         }
-        /* .column{
-          margin-left: auto;
-        } */
+      
         .box-text-left {
           height: 50px !important;
           background-color: #4fc0eb;
           color: #ffffff;
           shape-outside: padding-box;
-          /* width: 350px;  */
           position: absolute !important;
           font-family: 'Quicksand', sans-serif;
           border-radius: 10px;
           width: 40% !important;
-          /* margin: 0; */
           margin-left: -25px !important;
           margin-top: 0 !important;
-          /* margin-left: 10px !important; */
-          /* margin-left: 30px;
-          margin-top: 20px; */
         }
         .box-text-right {
           height: 50px !important;
           background-color: #4fc0eb;
           color: #ffffff;
           shape-outside: padding-box;
-          /* width: 350px;  */
           position: absolute !important;
           font-family: 'Quicksand', sans-serif;
           border-radius: 10px;
           width: 40% !important;
-          /* margin: 0; */
           margin-left: -5px !important;
           margin-top: 0 !important;
-          /* margin-left: 10px !important; */
-          /* margin-left: 30px;
-          margin-top: 20px; */
         }
       .column img {
         width: 200% !important;
-        /* display: flex center;
-        max-width: 350px; */
       }
       .column .img-left {
         width: 200% !important;
         margin-left: -20px !important;
-        /* display: flex center;
-        max-width: 350px; */
       }
       .title-devs{
         padding-top: 10px !important; 
@@ -262,22 +243,16 @@
         padding-top: 4px;
         font-size: 0.75rem;
       }
-
-      
-      }
+    }
+    /* end of navbar responsive */
 
 
 body {
 
   font-family: 'Quicksand', sans-serif;
-  /* margin: 0; */
-  /* display: flex;
-  flex-direction: column; */
+
 }
 
-
-
-/* end of nav bar */
 
 /* start content */
 .title {
@@ -293,7 +268,6 @@ body {
   text-align: center;
   font-family: 'Quicksand', sans-serif;
   color: #727272;
-  /* bottom: 3rem; */
 }
 
 .container {
@@ -362,35 +336,6 @@ body {
     padding-top: 20px;
   }
 
-/*responsive*/
-
-/* @media (max-width: 991px) {
-
-  
-  .container {
-    padding: 20px 20px;
-    width: 50%;
-    padding-top: 200px;
-    margin-right: 200px ;
-  
-  }
-  
-  .column {
-    width: 100%;
-    height: 150px;
-   
-  }
-
-  .box-text {
-    width: 100%;
-    font-size: 80%;
-  
-  }
-  .column img {
-    margin-left: 100%;
-  }
-
-} */
 
 .footer-page2 {
         width: 100%;
@@ -422,6 +367,7 @@ body {
   </style>
   </head>
   <body>
+    <!-- start header navbar -->
     <header>
       <nav>
         <div class="logo">
@@ -431,8 +377,8 @@ body {
 
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="page-2.html">About Us</a></li>
-          <li><a href="page-3.html">Schedule</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
           <li><a href="#appointment" hidden>Appointment</a></li>
         </ul>
 
@@ -444,7 +390,9 @@ body {
         </div>
       </nav>
     </header>
+    <!-- end header navbar -->
 
+    <!-- start content page -->
     <div class="title">
         <h1>About Us</h1>
         <p>TwentySevenMedika Group</p>
@@ -496,7 +444,12 @@ body {
     </div>
   </div>
 </div>
+<!-- end content page -->
+<!-- footer -->
 <footer class="footer-page2"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
-  <script src="js/script.js"></script>
+<!-- end footer   -->
+<!-- add eksternal javasript -->
+<script src="js/script.js"></script>
+
 </body>
 </html>
