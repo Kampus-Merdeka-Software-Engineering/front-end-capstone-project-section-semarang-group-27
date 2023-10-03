@@ -1,4 +1,67 @@
-// start page-3//
+// start schedule page
+let boxes = document.querySelectorAll('.category-box');
+      let selectedCategory = document.getElementById('res-cat');
+      boxes.forEach(function (box) {
+        box.addEventListener('click', function () {
+          // Add "selected" class to the clicked category box
+          if (box.classList.contains('selected')) {
+            box.classList.remove('selected');
+            selectedCategory.textContent = 'None';
+          } else {
+            boxes.forEach(function (el) {
+              // Remove "selected" class from all category boxes
+              el.classList.remove('selected');
+            });
+            box.classList.add('selected');
+            selectedCategory.textContent = box.querySelector('p').textContent;
+          }
+        });
+      });
+
+      let dates = document.querySelectorAll('.date-box');
+      let selectedDates = document.getElementById('res-date');
+      dates.forEach(function (date) {
+        date.addEventListener('click', function () {
+          // Add "selected" class to the clicked date box
+          if (date.classList.contains('selected')) {
+            date.classList.remove('selected');
+            selectedDates.textContent = 'None';
+          } else {
+            // Remove "selected" class from all dates boxes
+            dates.forEach(function (el) {
+              el.classList.remove('selected');
+            });
+            date.classList.add('selected');
+            selectedDates.textContent = date.querySelector('p').textContent;
+          }
+        });
+      });
+
+      let times = document.querySelectorAll('.time-box');
+      let selectedTime = document.getElementById('res-time');
+      times.forEach(function (time) {
+        time.addEventListener('click', function () {
+          // Add "selected" class to the clicked time box
+          if (time.classList.contains('selected')) {
+            time.classList.remove('selected');
+            selectedTime.textContent = 'None';
+          } else {
+            // Remove "selected" class from all dates boxes
+            times.forEach(function (el) {
+              el.classList.remove('selected');
+            });
+            time.classList.add('selected');
+            selectedTime.textContent = time.querySelector('p').textContent;
+          }
+        });
+      });
+
+      let selectedDoctor = document.getElementById('res-doc');
+      selectedDoctor.textContent = document.querySelector('.doctorsName').textContent;
+// end schedule page
+
+
+// start patient-form page//
 document.addEventListener('DOMContentLoaded', function () {
   const loginForm = document.getElementById('loginForm');
   const message = document.getElementById('message');
@@ -48,9 +111,9 @@ document.addEventListener('DOMContentLoaded', function () {
     message.style.color = 'green';
   });
 });
-//end of page-3//
+//end patient-form page//
 
-//start page-4//
+//start result page//
 document.addEventListener('DOMContentLoaded', function () {
   loadContent();
 });
@@ -84,7 +147,7 @@ function generatePDF() {
 
   html2pdf().from(element).save();
 }
-//end of page-4//
+//end receipt page//
 
 // add content in navbar mobile device
 const menuToggle = document.querySelector('.menu-toggle input');
