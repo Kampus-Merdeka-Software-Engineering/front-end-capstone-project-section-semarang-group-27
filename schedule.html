@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Twenty Seven Medika</title>
     <link rel="icon" href="assets/img/icon-web.ico" />
-    <link rel="stylesheet" href="./css/style.css">
-
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <!-- Start Header -->
@@ -18,9 +17,9 @@
         </div>
 
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="schedule.html">Schedule</a></li>
+          <li><a class="border-item-navbar" href="index.html">Home</a></li>
+          <li><a class="border-item-navbar" href="about.html">About Us</a></li>
+          <li><a class="border-item-navbar active" href="schedule.html">Schedule</a></li>
         </ul>
 
         <div class="menu-toggle">
@@ -37,22 +36,22 @@
     <main class="main-content">
       <h1 class="dokter-kita">Our Doctors</h1>
       <div class="category-area">
-        <div class="category-box">
+        <div class="category-box" id="">
           <p>General Doctor</p>
         </div>
-        <div class="category-box">
+        <div class="category-box" id="">
           <p>Pediatrician</p>
         </div>
-        <div class="category-box">
+        <div class="category-box" id="">
           <p>Ear Nose Throat</p>
         </div>
-        <div class="category-box">
+        <div class="category-box" id="">
           <p>Dentist</p>
         </div>
-        <div class="category-box">
+        <div class="category-box" id="">
           <p>Gynecology</p>
         </div>
-        <div class="category-box">
+        <div class="category-box" id="">
           <p>Cardiology</p>
         </div>
       </div>
@@ -64,22 +63,22 @@
         </div>
 
         <div class="date-area">
-          <div class="date-box">
+          <div class="date-box" id="">
             <p>Senin, 25 September 2023</p>
           </div>
-          <div class="date-box">
+          <div class="date-box" id="">
             <p>Selasa, 26 September 2023</p>
           </div>
-          <div class="date-box">
+          <div class="date-box" id="">
             <p>Rabu, 27 September 2023</p>
           </div>
-          <div class="date-box">
+          <div class="date-box" id="">
             <p>Kamis, 28 September 2023</p>
           </div>
-          <div class="date-box">
+          <div class="date-box" id="">
             <p>Jumat, 29 September 2023</p>
           </div>
-          <div class="date-box">
+          <div class="date-box" id="">
             <p>Sabtu, 30 September 2023</p>
           </div>
         </div>
@@ -95,7 +94,9 @@
             <p>13:00 - 14:00</p>
           </div>
           <div class="bookingButton">
-            <a href="patient-form.html"><button>Make Appointment</button></a>
+            <a href="patient-form.html">
+              <button type="submit">Make Appointment</button>
+            </a>
           </div>
         </div>
       </div>
@@ -110,7 +111,7 @@
     </main>
     <footer class="footer-allpage"><p>All Right Reserved &#169; Created by Group 27 Section Semarang</p></footer>
     <!-- End Content -->
-    
-    <script src="./js/script.js"></script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>

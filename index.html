@@ -23,9 +23,9 @@
     </div>
 
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="schedule.html">Schedule</a></li>
+      <li><a class="border-item-navbar active" href="index.html">Home</a></li>
+      <li><a class="border-item-navbar" href="about.html">About Us</a></li>
+      <li><a class="border-item-navbar" href="schedule.html">Schedule</a></li>
     </ul>
 
     <div class="menu-toggle">
@@ -143,15 +143,8 @@
 <!-- End footer  -->
 
 
-<!-- Add javasript -->
-<script>
-  const menuToggle = document.querySelector('.menu-toggle input');
-  const nav = document.querySelector('nav ul');
-
-  menuToggle.addEventListener('click', function () {
-  nav.classList.toggle('slide');
-  });
-</script>
+<!-- Add external javasript -->
+<script src="js/script.js"></script>
 
 </body>
 </html>

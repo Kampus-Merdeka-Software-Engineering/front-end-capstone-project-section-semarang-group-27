@@ -24,7 +24,6 @@ body {
   background-color: #ffffff;
 }
 
-
 /* --Start nav bar--*/
 header nav {
   align-items: center !important;
@@ -67,7 +66,8 @@ header nav ul {
 header nav ul li {
   font-size: 1.15em !important;
 }
-header nav ul li a {
+
+header nav ul li .border-item-navbar {
   color: #fff !important;
   transition: all 0.2s ease-in-out !important;
   padding: 0.5rem 1.5rem !important;
@@ -75,11 +75,13 @@ header nav ul li a {
   text-decoration: none !important;
   font-family: 'Quicksand', sans-serif;
 }
-header nav ul li a:hover {
+header nav ul li .active,
+.border-item-navbar:hover {
   color: #4fc0ec !important;
   background-color: #fff !important;
   transition: all 0.2s ease-in-out !important;
 }
+
 .menu-toggle {
   display: none !important;
   flex-direction: column !important;
@@ -103,7 +105,7 @@ header nav ul li a:hover {
   display: block !important;
   height: 3px !important;
   transition: all 0.5s !important;
-  width: 28px !important; 
+  width: 28px !important;
 }
 .menu-toggle span:nth-child(2) {
   transform-origin: 0 0 !important;
@@ -171,7 +173,7 @@ header nav ul li a:hover {
     align-items: center !important;
     background-color: #4fc0ec !important;
     flex-direction: column !important;
-    height: 25vh !important;
+    height: 22vh !important;
     justify-content: space-evenly !important;
     opacity: 0 !important;
     position: absolute !important;
@@ -186,7 +188,7 @@ header nav ul li a:hover {
   header nav ul li {
     padding-top: 5px !important;
   }
-  header nav ul li a{
+  header nav ul li a {
     padding-top: 5px !important;
     font-size: 2rem !important;
   }
@@ -237,9 +239,15 @@ header nav ul li a:hover {
     align-items: center;
   }
 
+  .patientform {
+    margin-top: 40px !important;
+  }
+
   /* schedule page */
+
   .dokter-kita {
-    margin-top: 30px !important;
+    margin-top: 70px !important;
+    font-size: 3rem !important;
   }
   .result-details {
     display: flex;
@@ -284,6 +292,10 @@ header nav ul li a:hover {
     padding: 5px !important;
     font-size: 1rem;
     font-weight: bold;
+    margin-left: -5px !important;
+  }
+  .bookingButton a {
+    color: white;
   }
   .doctor-area img {
     margin: auto;
@@ -324,7 +336,6 @@ header nav ul li a:hover {
 }
 /* --End nav bar-- */
 
-
 /* Start scroll style*/
 ::-webkit-scrollbar {
   width: 10px;
@@ -338,7 +349,6 @@ header nav ul li a:hover {
   background-color: transparent;
 }
 /* End scroll style */
-
 
 /* Start footer all page  */
 .footer-allpage {
@@ -356,7 +366,6 @@ header nav ul li a:hover {
   bottom: auto;
 }
 /* End footer all page */
-
 
 /* --Start page index -- */
 :root {
@@ -725,7 +734,6 @@ a {
 
 /* --End page index -- */
 
-
 /* Start page schedule */
 .dokter-kita {
   margin-top: 50px;
@@ -734,6 +742,10 @@ a {
 }
 .main-content {
   margin-top: 100px;
+}
+
+.bookingButton a {
+  color: white;
 }
 
 .doctorsImage {
@@ -845,7 +857,7 @@ a {
 .time-box:hover {
   cursor: pointer;
   background-color: #4fc0ec;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .selected {
@@ -871,7 +883,7 @@ a {
   border: 3px;
   font-weight: bold;
 }
-.bookingButton button:hover{
+.bookingButton button:hover {
   cursor: pointer;
 }
 .results {
@@ -899,7 +911,6 @@ a {
   font-family: 'Quicksand', sans-serif !important;
 }
 /* End page schedule  */
-
 
 /* Start page patient-form */
 .patientform h1 {
@@ -936,9 +947,9 @@ a {
   text-transform: none !important;
 }
 
-.tumpul-outline-biru:hover{
+.tumpul-outline-biru:hover {
   border: 2px solid #2998c4;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 input[type='text'].tumpul-outline-biru {
@@ -1025,7 +1036,6 @@ input[type='date']::-webkit-calendar-picker-indicator {
   margin-top: 0;
 }
 /* End page patient-form */
-
 
 /* Start page receipt */
 body.bg-schedule {
@@ -1131,4 +1141,3 @@ body.bg-schedule {
   padding-top: 20px;
 }
 /* End page receipt */
-
