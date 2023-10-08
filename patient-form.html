@@ -6,20 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="assets/img/icon-web.ico" />
-        <title>TwentySevenMedika</title>
+        <title>Patient Form</title>
     </head>
     <body>
         <header>
             <nav>
               <div class="logo">
-                <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
-                <p class="label-company">TwentySevenMedika</p>
+                  <a href="index.html">
+                  <img class="logo-company" src="assets/img/logo-twentysevenmedika.png" alt="TwentySevenMedika" />
+                </a>
+                  <p class="label-company">TwentySevenMedika</p>
               </div>
           
               <ul>
                 <li><a class="border-item-navbar" href="index.html">Home</a></li>
                 <li><a class="border-item-navbar" href="about.html">About Us</a></li>
-                <li><a class="border-item-navbar" href="schedule.html">Schedule</a></li>
+                <li><a class="border-item-navbar" href="schedule-general.html">Schedule</a></li>
               </ul>
           
               <div class="menu-toggle">
@@ -34,33 +36,33 @@
             <div class="patientform">
                 <h1>Patient Information</h1>
                 <p>Please fill the form below to book appointment</p>
-                <form style="z-index: 5;" action="receipt.html" method="post">
+                <form style="z-index: 5;" id='patientForm'>
                     <div>
                         <label for="name" class="label">Full Name</label>
-                        <input type="text" name="name" class="tumpul-outline-biru" placeholder="Enter full name" required>
+                        <input type="text" name="name" class="tumpul-outline-biru" id="inputName" placeholder="Enter full name" required>
                     </div>
                     <div>
                         <label for="email" class="label">E-mail</label>
-                        <input type="email" name="email" class="tumpul-outline-biru" placeholder="Enter e-mail address" required>
+                        <input type="email" name="email" class="tumpul-outline-biru" id="inputEmail" placeholder="Enter e-mail address" required>
                     </div>
                     <div>
                         <label class="label" style="margin-bottom: 5px;">Gender</label>
                         <label class="radio-container" style="margin-right: 30px;">Male
-                            <input type="radio" name="gender" class="blue-radio" required>
+                            <input type="radio" name="gender" class="blue-radio" value=1 required>
                             <span class="checkmark"></span>
                         </label>
                         <label class="radio-container" >Female
-                            <input type="radio" name="gender" class="blue-radio">
+                            <input type="radio" name="gender" class="blue-radio" value=0>
                             <span class="checkmark"></span>
                         </label>
                     </div>
                     <div>
                         <label class="label">Date of Birth</label>
-                        <input type="date" class="tumpul-outline-biru" required>
+                        <input type="date" class="tumpul-outline-biru" id="inputDOB" required>
                     </div>
                     <div>
                         <label class="label">Reason for the Visit (Please describe your symptoms or reason for the appointment)</label>
-                        <input type="text" class="tumpul-outline-biru" placeholder="Ex. Routine check-up" >
+                        <input type="text" class="tumpul-outline-biru" id="inputReason" placeholder="Ex. Routine check-up" >
                     </div>
                     <div style="margin-top: 20px;">
                         <input type="checkbox" id="confirm" required name="confirm"> 
@@ -73,9 +75,9 @@
                         <br>
                     </div>
                     <div class="book-btn">
-                        <a href="receipt.html">
-                            <input src="receipt.html" type="submit" value="Book" class="btn-submit"></input>
-                        </a>
+                        <!-- <a href="receipt.html"> -->
+                            <input src="receipt.html" type="submit" value="Book" class="btn-submit" id="btn-booking"></input>
+                        <!-- </a> -->
                     </div>      
                 </form>
             </div>

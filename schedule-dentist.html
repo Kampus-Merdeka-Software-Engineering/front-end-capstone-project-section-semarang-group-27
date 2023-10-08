@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twenty Seven Medika</title>
+    <link rel="icon" href="assets/img/icon-web.ico" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header>
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img
+              class="logo-company"
+              src="assets/img/logo-twentysevenmedika.png"
+              alt="TwentySevenMedika"
+            />
+          </a>
+          <p class="label-company">TwentySevenMedika</p>
+        </div>
+
+        <ul>
+          <li><a class="border-item-navbar" href="index.html">Home</a></li>
+          <li><a class="border-item-navbar" href="about.html">About Us</a></li>
+          <li>
+            <a class="border-item-navbar active" href="schedule-general.html"
+              >Schedule</a
+            >
+          </li>
+        </ul>
+
+        <div class="menu-toggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- End Header -->
+    <!-- Content -->
+    <main class="main-content">
+      <h1 class="dokter-kita">Our Doctors</h1>
+      <div class="category-area">
+        <div class="category-box" id="">
+          <a href="schedule-general.html">General Doctor</a>
+        </div>
+        <div class="category-box" id="">
+          <a href="schedule-pediatrician.html">Pediatrician</a>
+        </div>
+        <div class="category-box" id="">
+          <a href="schedule-ent.html">Ear Nose & Throat</a>
+        </div>
+        <div class="category-box selected" id="">
+          <a href="schedule-dentist.html">Dentist</a>
+        </div>
+        <div class="category-box" id="">
+          <a href="schedule-gynecology.html">Gynecology</a>
+        </div>
+        <div class="category-box" id="">
+          <a href="schedule-cardiology.html">Cardiology</a>
+        </div>
+      </div>
+
+      <div class="doctors-detail" id="doctorsDetail"></div>
+
+      <div id="data-container">
+        <div class="results">
+          <div class="result-details">
+            <p id="res-doc">None</p>
+            <p id="res-day">None</p>
+            <p id="res-date">None</p>
+            <p id="res-time">None</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer-allpage">
+      <p>All Right Reserved &#169; Created by Group 27 Section Semarang</p>
+    </footer>
+    <!-- End Content -->
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
