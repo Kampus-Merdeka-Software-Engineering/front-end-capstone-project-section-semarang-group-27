@@ -1,3 +1,7 @@
+// Fixing JS
+console.log('Test')
+console.log(window.location.pathname)
+
 // add content in navbar mobile device
 const menuToggle = document.querySelector('.menu-toggle input')
 const nav = document.querySelector('nav ul')
