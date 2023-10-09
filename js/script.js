@@ -1,7 +1,3 @@
-// Fixing JS
-console.log('Test')
-console.log(window.location.pathname)
-
 // add content in navbar mobile device
 const menuToggle = document.querySelector('.menu-toggle input')
 const nav = document.querySelector('nav ul')
@@ -11,34 +7,38 @@ menuToggle.addEventListener('click', function () {
 })
 
 const baseURL = 'https://be-semarang-27-production.up.railway.app'
+const baseFEUrl = baseURL + '/FE-Semarang-27'
 // var appointmentID = null
 
-if (window.location.pathname == '/index.html') {
+if (window.location.href == baseFEUrl + '/index.html') {
   console.log('Index')
 } else if (
-  window.location.pathname == '/schedule-general.html' ||
-  window.location.pathname == '/schedule-pediatrician.html' ||
-  window.location.pathname == '/schedule-ent.html' ||
-  window.location.pathname == '/schedule-dentist.html' ||
-  window.location.pathname == '/schedule-gynecology.html' ||
-  window.location.pathname == '/schedule-cardiology.html'
+  window.location.href == baseFEUrl + '/schedule-general.html' ||
+  window.location.href == baseFEUrl + '/schedule-pediatrician.html' ||
+  window.location.href == baseFEUrl + '/schedule-ent.html' ||
+  window.location.href == baseFEUrl + '/schedule-dentist.html' ||
+  window.location.href == baseFEUrl + '/schedule-gynecology.html' ||
+  window.location.href == baseFEUrl + '/schedule-cardiology.html'
 ) {
-  if (window.location.pathname == '/schedule-general.html') {
+  if (window.location.href == baseFEUrl + '/schedule-general.html') {
     speciality = 'general'
     specialityKey = 'General Doctor'
-  } else if (window.location.pathname == '/schedule-pediatrician.html') {
+  } else if (
+    window.location.href ==
+    baseFEUrl + '/schedule-pediatrician.html'
+  ) {
     speciality = 'pediatrician'
     specialityKey = 'Pediatrician'
-  } else if (window.location.pathname == '/schedule-ent.html') {
+  } else if (window.location.href == baseFEUrl + '/schedule-ent.html') {
     speciality = 'ear'
     specialityKey = 'Ear Nose & Throat'
-  } else if (window.location.pathname == '/schedule-dentist.html') {
+  } else if (window.location.href == baseFEUrl + '/schedule-dentist.html') {
     speciality = 'dentist'
     specialityKey = 'Dentist'
-  } else if (window.location.pathname == '/schedule-gynecology.html') {
+  } else if (window.location.href == baseFEUrl + '/schedule-gynecology.html') {
     speciality = 'gynecology'
     specialityKey = 'Gynecology'
-  } else if (window.location.pathname == '/schedule-cardiology.html') {
+  } else if (window.location.href == baseFEUrl + '/schedule-cardiology.html') {
     speciality = 'cardiology'
     specialityKey = 'Cardiology'
   }
@@ -318,33 +318,35 @@ if (window.location.pathname == '/index.html') {
 
     // Dapatkan elemen tombol submit
     // Tambahkan event listener pada tombol submit
-    const submitButton = document.querySelector("button[type='submit']")
-    submitButton.addEventListener('click', function (event) {
-      event.preventDefault()
-      const selectedTimeBox = document.getElementById('res-time')
-      const selectedDateBox = document.getElementById('res-date')
+    const submitButton = document.querySelectorAll("button[type='submit']")
+    submitButton.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        event.preventDefault()
+        const selectedTimeBox = document.getElementById('res-time')
+        const selectedDateBox = document.getElementById('res-date')
 
-      // Validasi date box
-      if (selectedDateBox.textContent === 'None') {
-        // Date box tidak dipilih
-        alert('Silahkan pilih tanggal konsultasi')
-      } else {
-        // Validasi time box
-        if (selectedTimeBox.textContent === 'None') {
-          // Time box tidak dipilih
-          alert('Silahkan pilih sesi konsultasi')
+        // Validasi date box
+        if (selectedDateBox.textContent === 'None') {
+          // Date box tidak dipilih
+          alert('Silahkan pilih tanggal konsultasi')
         } else {
-          // Make session to store booking details
-          sessionStorage.setItem('data', JSON.stringify(bookingSessionData))
-          console.log(JSON.stringify(bookingSessionData))
+          // Validasi time box
+          if (selectedTimeBox.textContent === 'None') {
+            // Time box tidak dipilih
+            alert('Silahkan pilih sesi konsultasi')
+          } else {
+            // Make session to store booking details
+            sessionStorage.setItem('data', JSON.stringify(bookingSessionData))
+            console.log(JSON.stringify(bookingSessionData))
 
-          // Redirect to another page when both date and time are selected
-          window.location.href = 'patient-form.html' // Replace with the desired URL
+            // Redirect to another page when both date and time are selected
+            window.location.href = 'patient-form.html' // Replace with the desired URL
+          }
         }
-      }
+      })
     })
   }
-} else if (window.location.pathname == '/patient-form.html') {
+} else if (window.location.href == baseFEUrl + '/patient-form.html') {
   // Get the form element
   const form = document.querySelector('form')
 
@@ -454,7 +456,7 @@ if (window.location.pathname == '/index.html') {
         // Handle the error (e.g., display an error message to the user)
       })
   })
-} else if (window.location.pathname == '/receipt.html') {
+} else if (window.location.href == baseFEUrl + '/receipt.html') {
   console.log('Receipt Page')
   //start result page//
   document.addEventListener('DOMContentLoaded', function () {
@@ -522,6 +524,6 @@ if (window.location.pathname == '/index.html') {
     html2pdf().from(element).save()
   }
   //end receipt page//
-} else if (window.location.pathname == '/about.html') {
+} else if (window.location.href == '/about.html') {
   console.log('About Page')
 }
