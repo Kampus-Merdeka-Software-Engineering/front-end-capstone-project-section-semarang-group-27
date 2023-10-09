@@ -7,7 +7,7 @@ menuToggle.addEventListener('click', function () {
 })
 
 const baseURL = 'https://be-semarang-27-production.up.railway.app'
-const baseFEUrl = baseURL + '/FE-Semarang-27'
+const baseFEUrl = 'https://kampus-merdeka-software-engineering.github.io/FE-Semarang-27'
 // var appointmentID = null
 
 if (window.location.href == baseFEUrl + '/index.html') {
