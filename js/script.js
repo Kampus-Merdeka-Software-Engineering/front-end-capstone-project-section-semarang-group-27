@@ -1,15 +1,16 @@
-// add content in navbar mobile device
+// add content in navbar mobile device (for responsive design)
 const menuToggle = document.querySelector('.menu-toggle input')
 const nav = document.querySelector('nav ul')
-
 menuToggle.addEventListener('click', function () {
   nav.classList.toggle('slide')
 })
 
+// Declaration of baseURL API & baseURL for FrontEnd
 const baseURL = 'https://be-semarang-27-production.up.railway.app'
-const baseFEUrl = 'https://kampus-merdeka-software-engineering.github.io/FE-Semarang-27'
-// var appointmentID = null
+const baseFEUrl =
+  'https://kampus-merdeka-software-engineering.github.io/FE-Semarang-27'
 
+// Perform specific line of code for each file
 if (window.location.href == baseFEUrl + '/index.html') {
   console.log('Index')
 } else if (
@@ -20,6 +21,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
   window.location.href == baseFEUrl + '/schedule-gynecology.html' ||
   window.location.href == baseFEUrl + '/schedule-cardiology.html'
 ) {
+  // Initialize the speciality param and key for each page of schedules
   if (window.location.href == baseFEUrl + '/schedule-general.html') {
     speciality = 'general'
     specialityKey = 'General Doctor'
@@ -47,8 +49,8 @@ if (window.location.href == baseFEUrl + '/index.html') {
   const dataContainer = document.getElementById('data-container')
   dataContainer.style.fontSize = '24px'
 
+  // Declare variables needed for store the data from fetch
   var doctorsData = []
-
   var bookingSessionData = {
     patient_name: null,
     doctor_name: null,
@@ -58,7 +60,6 @@ if (window.location.href == baseFEUrl + '/index.html') {
     day: null,
     reason: null
   }
-
   var doctorData = {
     doctor_name: '',
     doctor_image: '',
@@ -69,7 +70,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
   var arrayDokter = []
   const doctorIDs = []
 
-  // console.log('fetch data')
+  // Fetch Doctors Data based on Speciality / Schedule Pages Opened
   const urlDokter = baseURL + '/doctors/' + speciality
   fetch(urlDokter)
     .then(response => {
@@ -79,14 +80,15 @@ if (window.location.href == baseFEUrl + '/index.html') {
       return response.json()
     })
     .then(data => {
+      // Get Every Doctor's ID from specific speciality and store it to an Array
       arrayDokter = data[`${specialityKey}`]
       arrayDokter.forEach(function (doctor) {
         doctorIDs.push(doctor['doctor_id'])
       })
 
-      // console.log('Sebelum masuk Doctor ID')
+      // Create element for each Doctor's ID
       doctorIDs.forEach(function (id) {
-        // console.log('Create Element')
+        // Create Element for Doctor's Detail
         const container = document.getElementById('doctorsDetail')
         const doctorBox = document.createElement('div')
         const doctorArea = document.createElement('div')
@@ -98,7 +100,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
         const bookingLink = document.createElement('a')
         const bookingBtn = document.createElement('button')
 
-        // console.log('Sebelum FETCH')
+        // Fetch the Doctor's Schedule of Practic
         const urlJadwal = baseURL + '/doctors/schedule/' + id
         fetch(urlJadwal)
           .then(response => {
@@ -108,7 +110,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
             return response.json()
           })
           .then(data => {
-            // console.log(data)
+            // Store the retrieved data to an object
             doctorData = {
               doctor_name: data.doctor_name,
               doctor_image: data.doctor_image,
@@ -116,11 +118,14 @@ if (window.location.href == baseFEUrl + '/index.html') {
               sessions: data.session
             }
 
-            doctorBox.className = `details-area doctorBox` // Add any additional classes as needed
+            // Connect and Fill the Text Content for every element with the retrieved data
+            doctorBox.className = `details-area doctorBox`
             container.appendChild(doctorBox)
 
             doctorArea.className = 'doctor-area'
             doctorBox.appendChild(doctorArea)
+
+            // Add interactivity to the element
             applyInteractivity()
 
             doctorImage.className = 'doctorsImage'
@@ -135,8 +140,8 @@ if (window.location.href == baseFEUrl + '/index.html') {
             dateArea.className = 'date-area'
             doctorBox.appendChild(dateArea)
 
+            // Get current date as a beginning of list of option
             const currentDate = new Date()
-            // const dateArea = document.getElementById('dateArea') // replace 'dateArea' with your actual element ID
 
             const daysOfWeek = [
               'Sunday',
@@ -148,14 +153,13 @@ if (window.location.href == baseFEUrl + '/index.html') {
               'Saturday'
             ]
 
-            // Element for the first week
+            // Match the day and date for the options
             for (const dayOfWeekString of doctorData.days) {
-              // Find the index of the day of the week in the 'daysOfWeek' array
               const dayIndex = daysOfWeek.indexOf(dayOfWeekString)
 
               if (dayIndex !== -1) {
                 const dayDate = new Date(currentDate)
-                const daysToAdd = (dayIndex - currentDate.getDay() + 7) % 7 // Calculate days to add to match the specified day
+                const daysToAdd = (dayIndex - currentDate.getDay() + 7) % 7
                 dayDate.setDate(currentDate.getDate() + daysToAdd)
 
                 const currentDay = String(dayDate.getDate()).padStart(2, '0')
@@ -175,12 +179,11 @@ if (window.location.href == baseFEUrl + '/index.html') {
 
             // Element for the second week
             for (const dayOfWeekString of doctorData.days) {
-              // Find the index of the day of the week in the 'daysOfWeek' array
               const dayIndex = daysOfWeek.indexOf(dayOfWeekString)
 
               if (dayIndex !== -1) {
                 const dayDate = new Date(currentDate)
-                const daysToAdd = (dayIndex - currentDate.getDay() + 7) % 7 // Calculate days to add to match the specified day
+                const daysToAdd = (dayIndex - currentDate.getDay() + 7) % 7
                 dayDate.setDate(currentDate.getDate() + daysToAdd)
 
                 const currentDay = String(dayDate.getDate()).padStart(2, '0')
@@ -199,7 +202,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
               }
             }
 
-            // Create the time area
+            // Create the time area (session option)
             timeArea.className = 'time-area'
             doctorBox.appendChild(timeArea)
 
@@ -227,9 +230,8 @@ if (window.location.href == baseFEUrl + '/index.html') {
             bookingLink.appendChild(bookingBtn)
             bookingButton.appendChild(bookingLink)
 
+            // Add interactivity to the elements
             applyInteractivity()
-            // console.log('Add Interactivity')
-            // end schedule page
           })
           .catch(err => {
             console.error('There was a problem with the fetch operation:', err)
@@ -240,6 +242,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
       console.error('There was a problem with the fetch operation:', error)
     })
 
+  // Function that add interactivity to certain elements
   async function applyInteractivity () {
     // Add interactivity for date boxes
     const dates = document.querySelectorAll('.date-box')
@@ -316,8 +319,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
       })
     })
 
-    // Dapatkan elemen tombol submit
-    // Tambahkan event listener pada tombol submit
+    // Add Interactivity to the Submit Button
     const submitButton = document.querySelectorAll("button[type='submit']")
     submitButton.forEach(function (button) {
       button.addEventListener('click', function (event) {
@@ -325,22 +327,20 @@ if (window.location.href == baseFEUrl + '/index.html') {
         const selectedTimeBox = document.getElementById('res-time')
         const selectedDateBox = document.getElementById('res-date')
 
-        // Validasi date box
+        // Date Box Option Validation
         if (selectedDateBox.textContent === 'None') {
-          // Date box tidak dipilih
           alert('Silahkan pilih tanggal konsultasi')
         } else {
-          // Validasi time box
+          // Session Box Option Validation
           if (selectedTimeBox.textContent === 'None') {
-            // Time box tidak dipilih
             alert('Silahkan pilih sesi konsultasi')
           } else {
-            // Make session to store booking details
+            // Make a session to store booking details
             sessionStorage.setItem('data', JSON.stringify(bookingSessionData))
             console.log(JSON.stringify(bookingSessionData))
 
             // Redirect to another page when both date and time are selected
-            window.location.href = 'patient-form.html' // Replace with the desired URL
+            window.location.href = 'patient-form.html'
           }
         }
       })
@@ -363,16 +363,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
     const confirm = document.querySelector('#confirm').checked
     const consent = document.querySelector('#consent').checked
 
-    // Output the retrieved values to the console (you can replace this with your desired logic)
-    console.log('Full Name:', fullName)
-    console.log('Email:', email)
-    console.log('Gender:', gender)
-    console.log('Date of Birth:', dateOfBirth)
-    console.log('Reason for Visit:', reasonForVisit)
-    console.log('Confirm:', confirm)
-    console.log('Consent:', consent)
-
-    // Perform any other actions you need with the retrieved values here
+    // Store the value from the form to an Object
     var patientData = {
       patient_name: fullName,
       email: email,
@@ -380,10 +371,10 @@ if (window.location.href == baseFEUrl + '/index.html') {
       date_of_birth: dateOfBirth
     }
 
-    // Define the server endpoint where you want to send the POST request
-    const patientFormUrl = baseURL + '/patient-form' // Replace with your actual API endpoint
+    // Define the server endpoint to send the POST request for the Patient Data
+    const patientFormUrl = baseURL + '/patient-form'
 
-    // Send the POST request with the form data
+    // Send the POST request with the form data that has been stored to the Object
     fetch(patientFormUrl, {
       method: 'POST',
       headers: {
@@ -398,12 +389,13 @@ if (window.location.href == baseFEUrl + '/index.html') {
         return response.json()
       })
       .then(data => {
-        // Handle the response from the server (if needed)
-        console.log('Response from server:', data)
+        // If the Patient Data is successfully stored in, continue to POST the Booking Details from Session
+        const appointmentBookUrl = baseURL + '/book'
 
-        const appointmentBookUrl = baseURL + '/book' // Replace with your actual API endpoint
+        // Get the booking details from session and store it to a variable
         const sessionData = JSON.parse(sessionStorage.getItem('data'))
 
+        // Define the booking data object
         var bookData = {
           patient_name: fullName,
           doctor_name: sessionData['doctor_name'],
@@ -414,6 +406,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
           reason: reasonForVisit
         }
 
+        // Send the POST request with the form data that has been stored to the Object
         fetch(appointmentBookUrl, {
           method: 'POST',
           headers: {
@@ -428,16 +421,14 @@ if (window.location.href == baseFEUrl + '/index.html') {
             return response.json()
           })
           .then(data => {
-            // Handle the response from the server (if needed)
-            console.log('Response from server:', data)
-            appointmentID = data.appointment_id
-            console.log(appointmentID)
+            // Store the successfull appointment_id to the session for receipt page
+            var appointmentID = data.appointment_id
             sessionStorage.setItem(
               'appointment_id',
               JSON.stringify(appointmentID)
             )
 
-            // Optionally, you can redirect to another page (e.g., a receipt page) after a successful submission
+            // Redirect to Receipt Page
             window.location.href = 'receipt.html'
           })
           .catch(error => {
@@ -445,32 +436,27 @@ if (window.location.href == baseFEUrl + '/index.html') {
               'There was a problem with the fetch operation:',
               error
             )
-            // Handle the error (e.g., display an error message to the user)
           })
-
-        // Optionally, you can redirect to another page (e.g., a receipt page) after a successful submission
-        // window.location.href = 'receipt.html/2'
       })
       .catch(error => {
         console.error('There was a problem with the fetch operation:', error)
-        // Handle the error (e.g., display an error message to the user)
       })
   })
 } else if (window.location.href == baseFEUrl + '/receipt.html') {
   console.log('Receipt Page')
-  //start result page//
   document.addEventListener('DOMContentLoaded', function () {
     loadContent()
   })
 
   function loadContent () {
     const appointment_id = JSON.parse(sessionStorage.getItem('appointment_id'))
-    const endpoint = `https://be-semarang-27-production.up.railway.app/receipt_detail/${appointment_id}`
-    // Tampilkan data di front end
+    const endpoint = `${baseURL}/receipt_detail/${appointment_id}`
 
+    // Send the GET request to retrieve a data with specific appointment_id
     fetch(endpoint)
       .then(result => result.json())
       .then(data => {
+        // Get The HTML Element to store the data to the page
         const rightColumn = document.querySelector('.right-column')
 
         var gender = null
@@ -493,6 +479,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
           'Saturday'
         ]
 
+        // Adding elements to the page with the data retrieved
         rightColumn.innerHTML = `
         <p>${data[0].appointment_id}</p> </br>
         <p>${data[0].patient_name}</p> </br>
@@ -510,6 +497,7 @@ if (window.location.href == baseFEUrl + '/index.html') {
       })
   }
 
+  // Function to format the date from sql
   function formatDateToDDMMYYYY (dateString) {
     const inputDate = new Date(dateString)
     const day = String(inputDate.getUTCDate()).padStart(2, '0')
@@ -518,12 +506,12 @@ if (window.location.href == baseFEUrl + '/index.html') {
     return `${day}-${month}-${year}`
   }
 
+  // Function to generate the PDF
   function generatePDF () {
     const element = document.getElementById('invoice')
 
     html2pdf().from(element).save()
   }
-  //end receipt page//
 } else if (window.location.href == '/about.html') {
   console.log('About Page')
 }
